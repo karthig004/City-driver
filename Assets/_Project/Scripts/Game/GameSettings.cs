@@ -35,6 +35,10 @@ namespace CityDriver.Game
         public static int WeatherSetting { get => Mathf.Clamp(GetI("cd_weather", 0), 0, 3); set => Set("cd_weather", Mathf.Clamp(value, 0, 3)); }
         public static bool Subtitles { get => GetI("cd_subtitles", 1) == 1; set => Set("cd_subtitles", value ? 1 : 0); }
         public static bool Voice { get => GetI("cd_voice", 1) == 1; set => Set("cd_voice", value ? 1 : 0); }
+        /// <summary>Trip offers that pop up while you drive with no job (Accept / Skip).</summary>
+        public static bool JobOffers { get => GetI("cd_job_offers", 1) == 1; set => Set("cd_job_offers", value ? 1 : 0); }
+        /// <summary>Short one-time driving tips.</summary>
+        public static bool Tips { get => GetI("cd_tips", 1) == 1; set => Set("cd_tips", value ? 1 : 0); }
         public static float DialogueVolume { get => Mathf.Clamp01(GetF("cd_vol_voice", 0.9f)); set => Set("cd_vol_voice", Mathf.Clamp01(value)); }
 
         /// <summary>0 standard (x0.7), 1 long (x1.0, default), 2 epic (x1.5).</summary>
@@ -49,7 +53,7 @@ namespace CityDriver.Game
 
         public static void ResetToDefaults()
         {
-            foreach (string k in new[] { "cd_steer_mode", "cd_steer_sens", "cd_vol_master", "cd_vol_music", "cd_vol_sfx", "cd_radio", "cd_camera", "cd_mph", "cd_quality", "cd_time", "cd_weather", "cd_trip", "cd_subtitles", "cd_voice", "cd_vol_voice" })
+            foreach (string k in new[] { "cd_steer_mode", "cd_steer_sens", "cd_vol_master", "cd_vol_music", "cd_vol_sfx", "cd_radio", "cd_camera", "cd_mph", "cd_quality", "cd_time", "cd_weather", "cd_trip", "cd_subtitles", "cd_voice", "cd_vol_voice", "cd_job_offers", "cd_tips" })
             { try { PlayerPrefs.DeleteKey(k); } catch (Exception) { } }
             Changed?.Invoke();
         }

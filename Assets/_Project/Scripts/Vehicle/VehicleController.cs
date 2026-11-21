@@ -27,7 +27,8 @@ namespace CityDriver.Vehicle
         [SerializeField] private VehicleInputHandler inputHandler;
         [SerializeField] private VehicleDamage damage;
 
-        private static readonly string[] GearLabels = { "R", "N", "1", "2", "3", "4", "5", "6", "7", "8" };
+        private const float ArcadeSteerGrip = 1.5f, HighSpeedSteerFloor = 3f, PowerSlideMinOversteer = 0.3f;
+        private static readonly string[] GearLabels ={ "R", "N", "1", "2", "3", "4", "5", "6", "7", "8" };
 
         private Rigidbody body;
         private WheelCollider[] wheels;
@@ -231,7 +232,7 @@ namespace CityDriver.Vehicle
             {
                 if (input.Handbrake && kmh > 22f) intent = 1f;                                                          // handbrake turn: the classic way in
                 else if (input.Brake > 0.4f && Mathf.Abs(input.Steer) > 0.45f && kmh > 50f) intent = Mathf.Clamp01((kmh - 50f) / 25f);     // brake into a turn at speed: the touch-screen way to start a drift
-                else if (rearDriven && input.Throttle > 0.8f && Mathf.Abs(input.Steer) > 0.62f && kmh > 45f)           // power slide: full throttle + a hard turn
+                else if (rearDriven && stats.powerOversteer >= PowerSlideMinOversteer && input.Throttle > 0.8f && Mathf.Abs(input.Steer) > 0.62f && kmh > 45f)   // power slide: full throttle + a hard turn (drift cars only: planted cars just turn)
                     intent = stats.powerOversteer * Mathf.Clamp01((kmh - 45f) / 55f);
             }
             driftIntent = Mathf.MoveTowards(driftIntent, intent, dt * (intent > driftIntent ? 7f : 1.4f));
@@ -261,8 +262,10 @@ namespace CityDriver.Vehicle
         private void ApplySteering(float steerInput, float speed, float fwd, float dt)
         {
             // Largest wheel angle whose bicycle-model lateral acceleration (v^2 * tan(angle) / wheelbase) stays within the grip limit.
-            float gripAngle = Mathf.Atan(wheelbase * stats.steerGripLimit / Mathf.Max(speed * speed, 1f)) * Mathf.Rad2Deg;
-            float maxAngle = Mathf.Clamp(gripAngle, stats.minSteerAngle, stats.maxSteerAngleLow);
+            // Arcade allowance: the pure grip formula left only ~1.7 deg of lock at 100 km/h, so on a touch screen the car felt like
+            // it would not turn at all under full throttle. Allow 1.5x the grip limit and never less than HighSpeedSteerFloor degrees.
+            float gripAngle = Mathf.Atan(wheelbase * stats.steerGripLimit * ArcadeSteerGrip / Mathf.Max(speed * speed, 1f)) * Mathf.Rad2Deg;
+            float maxAngle = Mathf.Clamp(gripAngle, Mathf.Max(stats.minSteerAngle, HighSpeedSteerFloor), stats.maxSteerAngleLow);
             maxAngle = Mathf.Max(maxAngle, Mathf.Max(driftAmount, driftIntent) * stats.maxSteerAngleLow * 0.8f);      // starting or holding a slide needs more lock than grip driving
             float shaped = Mathf.Sign(steerInput) * Mathf.Pow(Mathf.Abs(Mathf.Clamp(steerInput, -1f, 1f)), stats.steerCurve);
             float target = shaped * maxAngle;
@@ -308,7 +311,7 @@ namespace CityDriver.Vehicle
             float assist = stats.yawAssist * (1f - Mathf.Clamp01(driftAmount * 1.2f + driftIntent * 0.9f));     // let the car rotate while it is sliding
             if (assist <= 0.01f) return;
             float desired = forwardSpeed * Mathf.Tan(steerAngle * Mathf.Deg2Rad) / wheelbase;
-            float limit = stats.steerGripLimit * 1.1f / Mathf.Abs(forwardSpeed); // never ask for more yaw than the tyres can hold
+            float limit = stats.steerGripLimit * ArcadeSteerGrip * 1.1f / Mathf.Abs(forwardSpeed); // never ask for more yaw than the (arcade) tyres can hold
             desired = Mathf.Clamp(desired, -limit, limit);
             float actual = body.angularVelocity.y;
             body.AddTorque(Vector3.up * ((desired - actual) * assist * stats.yawAssistTorque), ForceMode.Force);

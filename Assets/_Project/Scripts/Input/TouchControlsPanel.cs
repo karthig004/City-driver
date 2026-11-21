@@ -51,10 +51,12 @@ namespace CityDriver.Controls
         /// <summary>The on-screen steering wheel (created by the UI layer). Used only in Wheel mode.</summary>
         public void SetWheel(RectTransform wheel) { wheelRect = wheel; }
         private RectTransform gearRect, gearKnob;
-        /// <summary>Gear lever position: 0 = P, 1 = R, 2 = N, 3 = D (default).</summary>
-        public int Gear { get; private set; } = 3;
+        public const int GearReverse = 1, GearDrive = 3;
+        /// <summary>Gear switch position: <see cref="GearReverse"/> (R) or <see cref="GearDrive"/> (D, default). There is no P or N.</summary>
+        public int Gear { get; private set; } = GearDrive;
         public void SetGear(RectTransform panel, RectTransform knob) { gearRect = panel; gearKnob = knob; }
-        public void SelectGear(int index) { Gear = Mathf.Clamp(index, 0, 3); }
+        public void SelectGear(int index) { Gear = index == GearReverse ? GearReverse : GearDrive; }
+        private bool gearWasTouched;
         private RectTransform handbrakeRect;
         /// <summary>The on-screen handbrake button (created by the UI layer).</summary>
         public void SetHandbrake(RectTransform button) { handbrakeRect = button; }
@@ -114,10 +116,10 @@ namespace CityDriver.Controls
             current = new VehicleInput
             {
                 Steer = steer,
-                Throttle = Gear == 3 ? throttle : 0f,
+                Throttle = Gear == GearDrive ? throttle : 0f,
                 Brake = brk ? 1f : 0f,
-                Reverse = Gear == 1 ? throttle : (rev ? 1f : 0f),
-                Handbrake = Gear == 0 || (handbrakeRect != null && HitTest(handbrakeRect)),
+                Reverse = Gear == GearReverse ? throttle : (rev ? 1f : 0f),
+                Handbrake = handbrakeRect != null && HitTest(handbrakeRect),
                 CameraReset = cam && !cameraResetWasDown,    // one pulse per press
             };
             cameraResetWasDown = cam;
@@ -125,21 +127,24 @@ namespace CityDriver.Controls
             Tint(steerLeft, left); Tint(steerRight, right); Tint(accelerator, gas); Tint(brake, brk); Tint(reverse, rev); Tint(cameraReset, cam);
         }
 
-        // Gear lever: touching a position selects it; the knob slides there.
+        // R | D switch: a NEW tap on a half selects it (a finger already down that slides onto the switch never changes gear,
+        // so a thumb drifting off the pedals cannot knock the car out of drive). The knob slides to the chosen half.
         private void UpdateGearLever()
         {
-            if (gearRect == null || !gearRect.gameObject.activeInHierarchy) return;
+            if (gearRect == null || !gearRect.gameObject.activeInHierarchy) { gearWasTouched = false; return; }
+            bool touched = false; float x = 0f;
             for (int i = 0; i < pointers.Count; i++)
             {
                 if (!RectTransformUtility.RectangleContainsScreenPoint(gearRect, pointers[i], null)) continue;
                 if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(gearRect, pointers[i], null, out Vector2 local)) continue;
-                Rect r = gearRect.rect;
-                Gear = Mathf.Clamp(Mathf.FloorToInt((r.yMax - local.y) / (r.height / 4f)), 0, 3);
+                touched = true; x = local.x - gearRect.rect.center.x; break;
             }
+            if (touched && !gearWasTouched) Gear = x < 0f ? GearReverse : GearDrive;
+            gearWasTouched = touched;
             if (gearKnob != null)
             {
-                float y = gearRect.rect.height * 0.5f - (Gear + 0.5f) * gearRect.rect.height / 4f;
-                gearKnob.anchoredPosition = Vector2.Lerp(gearKnob.anchoredPosition, new Vector2(gearKnob.anchoredPosition.x, y), 0.35f);
+                float kx = gearRect.rect.width * 0.25f * (Gear == GearReverse ? -1f : 1f);
+                gearKnob.anchoredPosition = Vector2.Lerp(gearKnob.anchoredPosition, new Vector2(kx, gearKnob.anchoredPosition.y), 0.35f);
             }
         }
 

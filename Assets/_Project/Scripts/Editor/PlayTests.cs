@@ -385,8 +385,10 @@ namespace CityDriver.EditorTools
                 yield return Wait(0.6f);
                 Check(left.gameObject.activeSelf && right.gameObject.activeSelf, "arrow buttons return in Buttons mode");
 
-                // ---- handbrake: gear P holds it (there is no separate handbrake button; braking into a turn drifts)
-                panel.SelectGear(0); yield return Wait(0.3f); Check(panel.Current.Handbrake, "gear P applies the handbrake"); panel.SelectGear(3); yield return Wait(0.3f); Check(!panel.Current.Handbrake, "gear D releases the handbrake");
+                // ---- gear switch: only R and D exist (no P / N); anything else falls back to D, and neither holds the handbrake
+                panel.SelectGear(0); yield return Wait(0.3f); Check(panel.Gear == CityDriver.Controls.TouchControlsPanel.GearDrive, "no P gear: an unknown gear falls back to D");
+                panel.SelectGear(CityDriver.Controls.TouchControlsPanel.GearReverse); yield return Wait(0.3f); Check(panel.Gear == CityDriver.Controls.TouchControlsPanel.GearReverse && !panel.Current.Handbrake, "R selects reverse without the handbrake");
+                panel.SelectGear(CityDriver.Controls.TouchControlsPanel.GearDrive); yield return Wait(0.3f); Check(!panel.Current.Handbrake, "D drives with the handbrake off");
 
                 // ---- settings persist and apply
                 CityDriver.Game.GameSettings.SteerSensitivity = 1.3f; CityDriver.Game.GameSettings.Master = 0.4f;

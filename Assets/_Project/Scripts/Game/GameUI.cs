@@ -22,7 +22,7 @@ namespace CityDriver.Game
     /// main menu, mission list, garage, wallet history and the mission result screen. Menus pause the game (timeScale 0).
     /// English only: Tamil text is NOT implemented (the built-in font has no Tamil glyphs).
     /// </summary>
-    public sealed class GameUI : MonoBehaviour
+    public sealed partial class GameUI : MonoBehaviour
     {
         public static GameUI Instance { get; private set; }
 
@@ -303,6 +303,7 @@ namespace CityDriver.Game
             UpdatePursuitHud();
             UpdateSkin();
             UpdateBoundaryWarning();
+            UpdateNotices();
             float now = Time.unscaledTime;
             if (subtitleRoot.activeSelf && now > subtitleUntil) subtitleRoot.SetActive(false);
             if (toastRoot.activeSelf && now > toastUntil) toastRoot.SetActive(false);
@@ -903,18 +904,22 @@ namespace CityDriver.Game
             BuildGearSelector();
         }
 
-        // P R N D gear lever (like the reference): R + gas reverses, D drives, N and P do not drive (P also holds the handbrake).
+        // R | D switch above the BRAKE pedal (not above GAS, so a thumb on the accelerator never touches it). Tap R to reverse with
+        // GAS, tap D to drive. The sliding knob sits under the chosen letter.
         private Text[] gearLetters;
+        private static readonly int[] GearSlots = { TouchControlsPanel.GearReverse, TouchControlsPanel.GearDrive };
         private void BuildGearSelector()
         {
-            var p = Box(safe, "GearSelector", new Vector2(1, 0), new Vector2(1, 0), new Vector2(-30, 370), new Vector2(100, 196), new Color(0.04f, 0.06f, 0.1f, 0.86f)); Rim(p);
-            Box(p, "Slot", new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(28, 0), new Vector2(28, 176), new Color(0.01f, 0.02f, 0.04f, 0.95f));
-            string[] g = { "P", "R", "N", "D" };
-            gearLetters = new Text[4];
-            for (int i = 0; i < 4; i++)
-                gearLetters[i] = Label(p, g[i], 44, Color.white, TextAnchor.MiddleCenter, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(-17, 73.5f - i * 49f), new Vector2(50, 48), FontStyle.Bold);
-            var knob = Box(p, "Knob", new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(28, -73.5f), new Vector2(50, 46), HudCyan);
-            Box(knob, "KnobInner", new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(36, 34), new Color(0.06f, 0.2f, 0.32f, 1f));
+            var p = Box(safe, "GearSelector", new Vector2(1, 0), new Vector2(1, 0), new Vector2(-250, 290), new Vector2(190, 84), new Color(0.04f, 0.06f, 0.1f, 0.88f)); Rim(p);
+            var knob = Box(p, "Knob", new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(47.5f, 0), new Vector2(84, 68), HudCyan);
+            Box(knob, "KnobInner", new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(72, 56), new Color(0.06f, 0.2f, 0.32f, 1f));
+            string[] g = { "R", "D" };
+            gearLetters = new Text[2];
+            for (int i = 0; i < 2; i++)
+            {
+                gearLetters[i] = Label(p, g[i], 44, Color.white, TextAnchor.MiddleCenter, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(i == 0 ? -47.5f : 47.5f, 0), new Vector2(84, 68), FontStyle.Bold);
+                gearLetters[i].raycastTarget = false;
+            }
             if (TouchControlsPanel.Instance != null) TouchControlsPanel.Instance.SetGear(p, knob);
         }
 
@@ -936,9 +941,9 @@ namespace CityDriver.Game
         private void UpdateGearLetters()
         {
             var panel = TouchControlsPanel.Instance; if (gearLetters == null || panel == null) return;
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < gearLetters.Length; i++)
             {
-                bool on = panel.Gear == i; Color c = !on ? new Color(0.62f, 0.66f, 0.74f, 0.9f) : i == 3 ? HudCyan : i == 1 ? new Color(1f, 0.74f, 0.22f) : Color.white;
+                bool on = panel.Gear == GearSlots[i]; Color c = !on ? new Color(0.62f, 0.66f, 0.74f, 0.9f) : GearSlots[i] == TouchControlsPanel.GearDrive ? Color.white : new Color(1f, 0.74f, 0.22f);
                 if (gearLetters[i].color != c) gearLetters[i].color = c;
             }
         }
@@ -1077,6 +1082,8 @@ namespace CityDriver.Game
                 case 2:
                 {
                     Segmented(Row("TRIP LENGTH", "Distance of fares"), GameSettings.TripNames, GameSettings.TripLength, i => GameSettings.TripLength = i, 440f);
+                    SwitchRow(Row("JOB OFFERS", "New fares pop up while you drive"), GameSettings.JobOffers, v => GameSettings.JobOffers = v);
+                    SwitchRow(Row("DRIVING TIPS", "Short hints, each shown once"), GameSettings.Tips, v => GameSettings.Tips = v);
                     var sky = Row("TIME AND WEATHER", "Automatic: they change as jobs start and end");
                     Label(sky, "Automatic", 28, Accent, TextAnchor.MiddleRight, new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(-24, 0), new Vector2(300, 44), FontStyle.Bold);
                     var lang = Row("LANGUAGE", "More coming soon");
@@ -1178,7 +1185,13 @@ namespace CityDriver.Game
                 Btn(p, max ? "MAX" : gated ? $"LEVEL {gate}" : GameSession.Money(cost), new Vector2(0, 1), new Vector2(0, 1), new Vector2(1128, y - 8), new Vector2(150, 56), () =>
                 {
                     if (gated) { ShowToast($"Reach Level {gate} for this upgrade stage"); return; }
-                    if (s.Garage.TryBuyUpgrade(s.Data.selectedVehicleId, tt, out string why)) { s.Persist(); VehicleTuning.ApplyToCurrentCar(); paintApplied = false; ShowToast($"{tt} upgraded"); OpenGarage(); }
+                    if (s.Garage.TryBuyUpgrade(s.Data.selectedVehicleId, tt, out string why))
+                    {
+                        // the level gate used to be checked only when a mission ended, so buying the last required upgrade left the player stuck
+                        bool advanced = TryAdvanceAfterUpgrade();
+                        s.Persist(); VehicleTuning.ApplyToCurrentCar(); paintApplied = false;
+                        ShowToast(advanced ? $"{tt} upgraded - LEVEL {s.Career.Level} UNLOCKED" : $"{tt} upgraded"); OpenGarage();
+                    }
                     else ShowToast(why ?? "Cannot buy");
                 }, max ? new Color(0.22f, 0.24f, 0.27f) : gated ? new Color(0.30f, 0.20f, 0.20f) : Accent, 22);
                 y -= 84;
@@ -1260,7 +1273,7 @@ namespace CityDriver.Game
         // =============================================================================================== how to play (first run + menu)
         private static readonly (string title, string sub, string[] lines)[] HowToPages =
         {
-            ("DRIVE", "Wheel, pedals and gear lever", new[] { "Drag the STEERING WHEEL left and right to turn.", "Hold GAS to speed up and BRAKE to slow down or stop.", "Gear lever:  D drives,  R reverses (press GAS),  N coasts,  P parks.", "Brake while turning at speed to DRIFT. Tap the radar for the city map." }),
+            ("DRIVE", "Wheel, pedals and gear lever", new[] { "Drag the STEERING WHEEL left and right to turn.", "Hold GAS to speed up and BRAKE to slow down or stop.", "Gear switch above BRAKE:  tap D to drive,  tap R then hold GAS to reverse.", "Brake while turning at speed to DRIFT. Tap the radar for the city map." }),
             ("MISSIONS", "Pick up, drive, drop off, get paid", new[] { "Open MISSIONS from the menu and tap START.", "Drive to the glowing marker and STOP inside it to pick up your passenger.", "Follow the GPS arrows to the drop-off and stop again.", "You earn money and XP. Level up to unlock new cars and upgrades." }),
             ("MAP AND GPS", "Never get lost", new[] { "The round radar shows your car, the road and your route.", "Tap the pin button for the full city map. Switch between 3D and 2D.", "In 3D: drag to move, + and - to zoom, tap any place to plan a route.", "Turn instructions appear at the top of the screen." }),
             ("SHADOW RUN", "Night jobs where the chase begins", new[] { "After you earn the Shadow Pass, secret night jobs unlock.", "Police and gangs chase you. Keep moving and get away from them.", "If police box you in and you stop, the job fails.", "Smoke and EMP weapons (weapon shop, Level 5) help you escape." }),
@@ -1289,7 +1302,7 @@ namespace CityDriver.Game
                     Pic(art, HudIcons.SteeringWheel, new Vector2(150, -150), new Vector2(240, 240));
                     Pic(art, HudIcons.PedalMetalShort, new Vector2(272, -330), new Vector2(86, 120));
                     Pic(art, HudIcons.PedalMetalTall, new Vector2(366, -300), new Vector2(86, 190));
-                    for (int i = 0; i < 4; i++) Label(art, "PRND"[i].ToString(), 34, i == 3 ? Good : Color.white, TextAnchor.MiddleCenter, new Vector2(0, 1), new Vector2(0.5f, 0.5f), new Vector2(46 + i * 46, -380), new Vector2(44, 44), FontStyle.Bold);
+                    for (int i = 0; i < 2; i++) Label(art, "RD"[i].ToString(), 34, i == 1 ? Good : new Color(1f, 0.74f, 0.22f), TextAnchor.MiddleCenter, new Vector2(0, 1), new Vector2(0.5f, 0.5f), new Vector2(304 + i * 52, -168), new Vector2(48, 44), FontStyle.Bold);
                     break;
                 case 1: Pic(art, HudIcons.Disc(HudIcons.Kind.Pin), new Vector2(210, -215), new Vector2(260, 260)); break;
                 case 2: Pic(art, HudIcons.Disc(HudIcons.Kind.Pin), new Vector2(130, -215), new Vector2(190, 190)); Pic(art, HudIcons.Disc(HudIcons.Kind.Camera), new Vector2(300, -215), new Vector2(150, 150)); break;
@@ -1358,12 +1371,27 @@ namespace CityDriver.Game
                 Label(banner, $"The Shadow Run failed. You lose {r.XpLost} XP and drop back to Level {r.LevelTo}. Replay its assignments to climb back up.", 22, new Color(1f, 0.86f, 0.84f), TextAnchor.UpperLeft, new Vector2(0, 0), new Vector2(0, 0), new Vector2(34, 10), new Vector2(790, 60));
             }
             else if (!string.IsNullOrEmpty(r.LevelNote)) Label(p, r.LevelNote, 24, r.LeveledUp ? Good : Muted, TextAnchor.MiddleLeft, new Vector2(0, 0), new Vector2(0, 0), new Vector2(40, 100), new Vector2(840, 60));
-            Btn(p, "CONTINUE", new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 26), new Vector2(420, 66), () =>
+            Action next = () =>
             {
                 CloseModal(); if (MissionRunner.Instance != null) MissionRunner.Instance.Dismiss();
                 var ss = GameSession.Instance;
                 if (ss.Data.hasShadowPass && !ss.Data.shadowCinematicSeen) PlayShadowPass();       // the Shadow Pass is awarded at the end of Level 3
-            }, Accent, 32);
+                else AfterResult(r);
+            };
+            // a failed run gets a one-tap way back in: RETRY the same job, or (after a level drop) jump to the lower level's assignments
+            bool canRetry = !r.Success && !r.LevelDown && r.Mission != null && r.FailReason != "Mission abandoned." && MissionRunner.Instance != null;
+            if (r.LevelDown || canRetry)
+            {
+                Btn(p, "LATER", new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(-150, 26), new Vector2(260, 66), next, new Color(0.22f, 0.24f, 0.28f), 28);
+                MissionDefinition again = r.Mission;
+                Btn(p, r.LevelDown ? $"REPLAY LEVEL {r.LevelTo}" : "RETRY", new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(150, 26), new Vector2(320, 66), () =>
+                {
+                    CloseModal(); var mr = MissionRunner.Instance; if (mr != null) mr.Dismiss();
+                    if (r.LevelDown) { OpenMissions(); return; }
+                    if (mr == null || !mr.StartMission(again)) ShowToast("Cannot restart this job right now");
+                }, Accent, 30);
+            }
+            else Btn(p, "CONTINUE", new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 26), new Vector2(420, 66), next, Accent, 32);
         }
 
         private void OnFinished(MissionResult r) => OpenResult(r);

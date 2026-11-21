@@ -71,6 +71,7 @@ namespace CityDriver.Save
         public bool hasActiveShadowMission;
         public string activeShadowMissionId = "";
         public List<string> completedMissions = new List<string>();
+        public List<string> seenHints = new List<string>();           // one-time driving tips already shown (never repeated)
 
         // Transaction ledger (capped) + ids that were already applied (idempotency)
         public List<TransactionRecord> transactions = new List<TransactionRecord>();
