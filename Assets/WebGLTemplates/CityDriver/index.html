@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#070a12">
+    <title>{{{ PRODUCT_NAME }}} | Karthi Lab</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <canvas id="unity-canvas" tabindex="-1"></canvas>
+
+    <!-- app-open loader: city skyline at dusk, studio mark, badge + title lockup, loading bar -->
+    <div id="loader">
+      <canvas id="sky"></canvas>
+      <div class="glow"></div>
+      <div class="trails"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="shade"></div>
+
+      <div id="lockup">
+        <div class="studio"><span class="line"></span>KARTHI LAB PRESENTS<span class="line"></span></div>
+        <div class="mark">
+          <svg id="badge" viewBox="0 0 210 250" aria-hidden="true">
+            <defs>
+              <linearGradient id="gRim" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff2b0"/><stop offset="0.45" stop-color="#e9a820"/><stop offset="1" stop-color="#8a4a06"/></linearGradient>
+              <linearGradient id="gFace" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#271a40"/><stop offset="1" stop-color="#06040f"/></linearGradient>
+              <linearGradient id="gMono" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff0a0"/><stop offset="0.5" stop-color="#ff9e24"/><stop offset="1" stop-color="#e5283a"/></linearGradient>
+              <radialGradient id="gGlow" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#ff9a3c" stop-opacity="0.45"/><stop offset="1" stop-color="#ff9a3c" stop-opacity="0"/></radialGradient>
+            </defs>
+            <polygon points="105,4 207,64 207,186 105,246 3,186 3,64" fill="url(#gRim)" stroke-linejoin="round"/>
+            <polygon points="105,15 197,69 197,181 105,235 13,181 13,69" fill="url(#gFace)"/>
+            <polygon points="105,15 197,69 197,181 105,235 13,181 13,69" fill="url(#gGlow)"/>
+            <polygon points="105,24 189,73.5 189,176.5 105,226 21,176.5 21,73.5" fill="none" stroke="#f6cf6a" stroke-opacity="0.55" stroke-width="1.5"/>
+            <g transform="translate(105 125) skewX(-9) translate(-105 -125)">
+              <path d="M110 92 A40 40 0 1 0 110 158" fill="none" stroke="url(#gMono)" stroke-width="20"/>
+              <path d="M119 88 V162 M119 88 H132 A37 37 0 0 1 132 162 H119" fill="none" stroke="url(#gMono)" stroke-width="19" stroke-linejoin="round"/>
+            </g>
+            <path d="M138 70 L72 180" stroke="#0a0614" stroke-width="3.2" stroke-linecap="round"/>
+          </svg>
+          <div class="words">
+            <div class="t1">CITY</div>
+            <div class="t2">DRIVER</div>
+            <div class="rib"><span>UNDERCOVER</span></div>
+            <div class="tag">DRIVE. HIDE. SURVIVE.</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="panel">
+        <div class="row">
+          <div class="left"><div id="status">LOADING</div><div id="sub">Laying out the roads</div></div>
+          <div id="pct">0<small>%</small></div>
+        </div>
+        <div id="track"><div id="fill"></div><div id="glint"></div><div id="ticks"></div></div>
+        <div class="tip"><b>TIP</b><span id="tip">Stop inside the glowing marker to pick up and drop off your passengers.</span></div>
+      </div>
+      <div id="error"><div><h2>Could not start the game</h2><p id="errmsg"></p><button onclick="location.reload()">TRY AGAIN</button></div></div>
+    </div>
+
+    <button id="fs" title="Fullscreen" aria-label="Fullscreen"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div id="unity-warning"></div>
+
+    <script src="Build/{{{ LOADER_FILENAME }}}"></script>
+    <script>
+      // ------------------------------------------------------------------ skyline backdrop (drawn once)
+      (function () {
+        var c = document.getElementById('sky'), dpr = Math.min(2, window.devicePixelRatio || 1);
+        function draw() {
+          var W = c.width = Math.ceil(innerWidth * dpr), H = c.height = Math.ceil(innerHeight * dpr), g = c.getContext('2d');
+          var sky = g.createLinearGradient(0, 0, 0, H);
+          sky.addColorStop(0, '#0a1230'); sky.addColorStop(0.5, '#3a2a52'); sky.addColorStop(0.78, '#c9622e'); sky.addColorStop(1, '#f0a73c');
+          g.fillStyle = sky; g.fillRect(0, 0, W, H);
+          var sun = g.createRadialGradient(W * 0.72, H * 0.66, 0, W * 0.72, H * 0.66, H * 0.55);
+          sun.addColorStop(0, 'rgba(255,214,120,0.95)'); sun.addColorStop(0.18, 'rgba(255,170,70,0.55)'); sun.addColorStop(1, 'rgba(255,120,40,0)');
+          g.fillStyle = sun; g.fillRect(0, 0, W, H);
+          var seed = 7; function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+          for (var i = 0; i < 90; i++) { g.fillStyle = 'rgba(255,255,255,' + (0.15 + rnd() * 0.5) + ')'; g.fillRect(rnd() * W, rnd() * H * 0.45, dpr, dpr); }
+          var layers = [{ col: '#3a2c4a', h: 0.34, w: 54, win: 0.0 }, { col: '#241a33', h: 0.28, w: 70, win: 0.18 }, { col: '#0d0a16', h: 0.20, w: 92, win: 0.34 }];
+          layers.forEach(function (L, li) {
+            var x = -rnd() * 40 * dpr;
+            while (x < W) {
+              var bw = (L.w * (0.6 + rnd() * 0.9)) * dpr, bh = H * L.h * (0.35 + rnd() * 0.95);
+              g.fillStyle = L.col; g.fillRect(x, H - bh, bw, bh);
+              if (L.win > 0) {
+                for (var yy = H - bh + 10 * dpr; yy < H - 8 * dpr; yy += 14 * dpr) for (var xx = x + 7 * dpr; xx < x + bw - 8 * dpr; xx += 12 * dpr)
+                  if (rnd() < L.win) { g.fillStyle = rnd() < 0.7 ? 'rgba(255,205,110,0.85)' : 'rgba(150,200,255,0.7)'; g.fillRect(xx, yy, 5 * dpr, 7 * dpr); }
+              }
+              x += bw + (rnd() * 6) * dpr;
+            }
+          });
+          var road = g.createLinearGradient(0, H * 0.9, 0, H); road.addColorStop(0, '#0b0912'); road.addColorStop(1, '#050409');
+          g.fillStyle = road; g.fillRect(0, H * 0.93, W, H * 0.07);
+        }
+        draw(); var rt; addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(draw, 150); });
+      })();
+
+      // ------------------------------------------------------------------ loading UI
+      var tips = [
+        'Stop inside the glowing marker to pick up and drop off your passengers.',
+        'Long trips pay a distance bonus. Keep an eye on your fuel gauge.',
+        'Rain and fog reduce grip. Slow down before the corners.',
+        'Upgrade your engine, brakes and armour in the Garage.',
+        'Police only take an interest when a Shadow Run goes wrong. Stay out of sight.',
+        'A smoke launcher can shake off a chasing gang car.'
+      ];
+      var ticks = document.getElementById('ticks'); for (var i = 1; i < 31; i++) { var t = document.createElement('i'); t.style.left = (i / 31 * 100) + '%'; ticks.appendChild(t); }
+      var $ = function (id) { return document.getElementById(id); };
+      var target = 0, shown = 0, finished = false, startedAt = performance.now(), tipIdx = 0;
+      setInterval(function () { tipIdx = (tipIdx + 1) % tips.length; var el = $('tip'); el.style.opacity = 0; setTimeout(function () { el.textContent = tips[tipIdx]; el.style.opacity = 1; }, 350); }, 4200);
+      function frame() {
+        shown += (target - shown) * 0.07; if (target - shown < 0.0015) shown = target;
+        var p = Math.max(0, Math.min(1, shown));
+        $('fill').style.width = (p * 100) + '%'; $('glint').style.left = (p * 100) + '%';
+        $('pct').firstChild.nodeValue = Math.round(p * 100);
+        $('sub').textContent = p < 0.25 ? 'Laying out the roads' : p < 0.55 ? 'Waking up the traffic' : p < 0.85 ? 'Fuelling your car' : p < 0.999 ? 'Almost there' : 'Starting the engine';
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+
+      function hideLoader() {
+        var l = $('loader'); l.classList.add('done'); setTimeout(function () { l.style.display = 'none'; $('fs').classList.add('show'); }, 800);
+      }
+
+      var canvas = document.querySelector('#unity-canvas');
+      function unityShowBanner(msg, type) {
+        var b = $('unity-warning'), d = document.createElement('div'); d.innerHTML = msg; b.appendChild(d);
+        if (type == 'error') d.className = 'err'; else setTimeout(function () { if (d.parentNode) d.parentNode.removeChild(d); b.style.display = b.children.length ? 'block' : 'none'; }, 5000);
+        b.style.display = 'block';
+      }
+
+      createUnityInstance(canvas, {
+        arguments: [],
+#if PROGRESSIVE_ASSET_LOADING
+        primaryDataUrls: {{{ JSON.stringify(PRIMARY_DATA_FILES) }}},
+        secondaryDataUrls: {{{ JSON.stringify(SECONDARY_DATA_FILES) }}},
+#else
+        dataUrl: "Build/{{{ DATA_FILENAME }}}",
+#endif
+        frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_WASM
+        codeUrl: "Build/{{{ CODE_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+        showBanner: unityShowBanner
+      }, function (progress) { target = Math.max(target, progress * 0.97); }).then(function (unityInstance) {
+        target = 1;
+        $('fs').onclick = function () { unityInstance.SetFullscreen(1); };
+        var wait = Math.max(0, 2600 - (performance.now() - startedAt));       // let the title lockup be seen even on a fast connection
+        setTimeout(hideLoader, wait + 500);
+      }).catch(function (message) {
+        $('errmsg').textContent = String(message); $('error').classList.add('show');
+      });
+    </script>
+  </body>
+</html>

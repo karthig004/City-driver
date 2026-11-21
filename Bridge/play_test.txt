@@ -1,0 +1,252 @@
+
+Setup
+  [PASS] player car spawned and its controller is enabled
+  [PASS] touch controls panel is present
+  [PASS] all six touch buttons exist
+
+Touch controls drive the car (real Input System touches, multi-touch)
+  [PASS] idle with no touches: 0.0 km/h
+  [diag] game 3.00s, unscaled 3.00s, frames 89, gasPressed=True, panelEnabled=True, timeScale=1
+  holding GAS 3 s: 28.2 km/h, throttle 1.00, gear 1
+  [PASS] accelerator touch accelerates forward
+  [PASS] throttle ramps to full while held
+  GAS + STEER RIGHT 1.6 s: steer angle 11.4 deg, heading change 60.0 deg, speed 38.5 km/h
+  [PASS] right-steer touch turns the wheels right while the accelerator touch is still held (two fingers)
+  [PASS] the car actually turns right
+  [PASS] still moving under power while steering
+  STEER LEFT 1.6 s: steer angle -7.3 deg, strongest left yaw rate -0.63 rad/s
+  [PASS] left-steer touch turns the car left
+  [PASS] releasing the accelerator lets the throttle fall (now 0.00)
+  BRAKE 2.5 s: 0.1 -> 0.0 km/h
+  [PASS] brake touch brings the car nearly to a stop
+  REVERSE 3 s: forward speed -16.1 km/h, gear R
+  [PASS] gear R + accelerator touch drives the car backwards
+  [PASS] camera-reset button produces a reset pulse
+  [PASS] all controls return to zero when every finger is lifted
+
+Responsive layout (no overlap at common phone aspect ratios)
+  [PASS] no HUD/control overlap or off-screen element at 6 aspect ratios (16:9, 20:9, 21.3:9, 4:3, 19.5:9, 720p)
+
+GPS navigation on the real road graph
+  [PASS] navigation service has the city graph (343 junctions)
+  [PASS] activating mission waypoint dropoff_c sets the GPS destination
+  route 166 m, 5 points, first instruction "Turn left in 40 m", ETA 16 s
+  [PASS] route length is at least the straight-line distance
+  [PASS] turn-by-turn instruction is produced
+  halfway: remaining 83 m of 166 m
+  [PASS] remaining distance is about half at the route midpoint
+  [PASS] leaving the route triggers an automatic re-route
+  [PASS] destination is kept after re-routing
+
+Minimap and full-screen map
+  [PASS] minimap exists
+  [PASS] full map view exists
+  [PASS] full map opens
+  tap at hospital position -> destination 'City General Hospital', route 420 m
+  [PASS] tapping the full map selects the point of interest and plans a route
+  [PASS] clear-route button removes the route
+
+City population: pooled traffic, parked cars and sidewalk pedestrians
+  [PASS] CityPopulation was created when the scene loaded
+  active: 8 moving cars (7 in motion), 6 parked, 12 pedestrians (12 walking)
+  visible from the player camera now: 2 moving cars, 2 parked, 8 pedestrians; cars waiting at red signals: 1
+  [PASS] at least 8 moving traffic cars are active
+  [PASS] at least 6 parked cars are active
+  [PASS] at least 12 pedestrians are active
+  [PASS] traffic is actually moving
+  [PASS] pedestrians are actually walking
+  audit: 12 pedestrians checked, 0 on the carriageway; 5 moving cars checked, 0 on the wrong (right-hand) side
+  [PASS] no pedestrian is standing in the carriageway
+  [PASS] moving cars keep to the left lane (left-hand traffic)
+  [PASS] population count stays stable while the player drives and agents are recycled
+
+Camera views, steering modes, handbrake, settings, audio, map alignment and pedestrians
+  [PASS] camera controller found
+  [PASS] GameAudio was created when the scene loaded
+  camera distance/height by view: chase 8.0/3.1 m, far 11.5/4.6 m, bonnet 1.2/1.2 m, top-down 26.1/26.0 m
+  [PASS] chase camera sits 4.5-9 m behind the car
+  [PASS] far chase camera is further back than the chase camera
+  [PASS] bonnet camera is at the car
+  [PASS] top-down camera is high above the car
+  [PASS] the CAM button cycles to the next camera view
+  [PASS] steering wheel is visible in Wheel mode
+  [PASS] arrow buttons are hidden in Wheel mode
+  [PASS] touching the top of the wheel keeps steering straight
+  wheel: right side 0.60, left side -0.60, after release 0.00, wheel angle 0 deg
+  [PASS] dragging the wheel clockwise steers right
+  [PASS] dragging the wheel anticlockwise steers left
+  [PASS] the wheel springs back to centre when released
+  [PASS] Tilt mode runs without an accelerometer (no exceptions; steering stays valid)
+  [PASS] arrow buttons return in Buttons mode
+  [PASS] gear P applies the handbrake
+  [PASS] gear D releases the handbrake
+  [PASS] settings are stored (PlayerPrefs)
+  [PASS] reset to defaults restores them
+  [PASS] settings screen opens
+  [PASS] all synthesised audio clips (engine, tyres, wind, ambience, one-shots, 3 stations) were built in the background
+  [PASS] engine loop is playing and not silent
+  [PASS] tyre loop exists and is not silent
+  [PASS] radio is off when set to Off
+  engine pitch idle 0.88 -> driving 1.56; volume 0.20 -> 0.68; wind 0.05; speed 30 km/h; rpm01 0.53
+  [PASS] engine pitch rises with speed/throttle
+  [PASS] engine gets louder under throttle
+  [PASS] wind noise appears at speed
+  [PASS] radio station 1 (Lo-Fi City) plays a 13.3s loop that is not silent
+  [PASS] radio station 2 (Night Drive) plays a 9.6s loop that is not silent
+  [PASS] radio station 3 (Metro Beats) plays a 10.0s loop that is not silent
+  [PASS] master volume 0 silences radio and engine
+  [PASS] music volume 0 silences only the radio
+  map alignment: 24 road-graph points near the car; real road collider under 24/24 (colliders seen: Roads, Colliders_Road); map draws a road at 24/24
+  [PASS] the real 3D road surface lies under (nearly) every road-graph point
+  [PASS] the map draws a road at (nearly) every road-graph point
+  [PASS] minimap is centred on the car (uv 0.516,0.509 vs 0.516,0.509)
+  [PASS] minimap rotates with the car heading (heading up)
+  pedestrians: 12 active, 11 different pose/outfit meshes, height 1.32-1.80 m
+  [PASS] pedestrians have plausible human heights
+  [PASS] pedestrians wear a variety of outfits
+
+Passenger mission end-to-end (in-memory save; the real save file is not touched)
+  [PASS] MissionRunner and GameUI were created when the scene loaded
+  [PASS] new game starts with Rs 5,000, 0 XP, level 1
+  [PASS] main menu opens and pauses the game
+  [PASS] closing a menu resumes the game
+  [PASS] First Ride mission starts
+  [PASS] state is heading to the pickup
+  [PASS] only the pickup waypoint is shown
+  [PASS] GPS route to the pickup is active
+  [PASS] stopping at the pickup starts boarding
+  [PASS] passenger boards and the trip to the drop-off begins
+  [PASS] only the drop-off waypoint is shown now
+  [PASS] the GPS route stays on the map when the car gets within 14 m of the drop-off (it is only cleared when the mission ends)
+  [PASS] mission completes at the drop-off
+  result: base 300, time bonus 0, safe bonus 30, damage 0, wallet change 635, xp +100, note: Complete 'City Trip' first.
+  [PASS] wallet was paid the reward plus the 1.6 km distance bonus (minus any damage)
+  [PASS] XP was added separately from the wallet
+  [PASS] mission is recorded as completed
+  [PASS] result screen is shown
+  [PASS] save file round-trips wallet, XP and completed missions
+  [PASS] Continue (reload from storage) restores progress
+  [PASS] replaying pays only 25% and no second XP
+  [PASS] dismissing the result returns to free driving
+  [PASS] City Trip (timed) mission starts
+  [PASS] abandoning a mission fails it cleanly
+  [PASS] GPS route is cleared after the mission ends
+
+Environment, trips, fuel, upgrades, vehicles, Shadow Pass and pursuit
+  [PASS] environment, pursuit, fuel and street-dressing systems were created
+  street dressing: 68 props active around the car
+  [PASS] street furniture (bins, benches, stalls, bikes, signs, shelters) is placed along the sidewalks
+  [PASS] night: sun dims (intensity 0.26, night 1.00)
+  [PASS] headlights switch on at night (two beams)
+  [PASS] day: full light, headlights off
+  heavy rain: particles 1870, grip x0.70, fog end 156 m
+  [PASS] heavy rain: rain particles are falling
+  [PASS] heavy rain lowers tyre grip
+  [PASS] heavy rain reduces visibility (fog closes in)
+  [PASS] rain sound plays
+  [PASS] fog: visibility is limited (fog end 94 m)
+  [PASS] clear weather restores visibility, grip and stops the rain
+  engine upgrade: torque 1300 -> 1625, top speed 140 -> 157 km/h; speed after 3.5 s 30.6 -> 38.1 km/h
+  [PASS] engine stage 3 (maximum) raises torque and top speed in the physics stats
+  [PASS] the upgraded car really accelerates harder
+  [PASS] armour level 5 cuts collision damage (13% -> 7%)
+  [PASS] headlight upgrade extends the beam range
+  [PASS] a luxury SUV is locked at level 1
+  [PASS] the supercar can be bought at level 9 with enough money
+  [PASS] the supercar price is charged and the car is owned
+  [PASS] selecting it re-tunes the car
+  supercar speed after 3.5 s: 59.1 km/h (compact 30.6)
+  [PASS] the supercar is much faster than the compact sedan
+  [PASS] the weapon shop is locked before Level 5
+  [PASS] after Level 5 the smoke launcher can be bought and is equipped
+  [PASS] driving uses fuel (99.83% left)
+  [PASS] an empty tank cuts the engine power
+  [PASS] the car cannot accelerate without fuel (0.0 km/h)
+  tow: wallet 59000 -> 58600, fuel 25%, fuel factor 1
+  [PASS] a tow costs Rs 400 and restores 25% fuel and power
+  [PASS] refuel needs a petrol station
+  [PASS] the car can refuel when stopped at a petrol station
+  [PASS] refuelling fills the tank and charges Rs 151
+  [PASS] a Standard-length trip is planned and started
+  [PASS] an Epic-length trip is planned and started
+  trip lengths: standard 1002 m, epic 2043 m; pickup 309 m from the car; destination 'Northwest Residential'
+  [PASS] trips are long (>= 800 m even on Standard) and the setting scales them
+  [PASS] an Epic trip is at least 1.5 km
+  [PASS] the pickup is reasonably close to the player
+  [PASS] a pickup marker exists at the planned spot
+  [PASS] the GPS routes to the pickup
+  [PASS] trip markers are removed when the mission ends
+  [PASS] the Shadow Pass sequence runs all stages (completed 6/6)
+  [PASS] the sequence turns the city to night with rain
+  [PASS] the music switches to the suspense track
+  [PASS] the car's headlights are on
+  [PASS] the cinematic is recorded as seen (it plays once automatically)
+  [PASS] a Shadow Run call is allowed (level >= 3, Shadow Pass, money, not captured)
+  [PASS] the Shadow Run mission starts
+  [PASS] Shadow Run switches the city to night and rain
+  [PASS] after boarding, the chase begins
+  pursuit plan for level 4: 1 gang car(s), 0 police car(s), 0 roadblock(s), speed x0.90
+  [PASS] a gang car joins the chase (Level 4: one gang vehicle follows)
+  [PASS] the chaser car has a mesh and material and is switched on
+  [PASS] the chaser car carries its light halos (roof, head and tail lamps)
+  [PASS] a chaser car 30 m in front of the camera is inside the camera view (it can be seen)
+  [PASS] pursuers appear behind the player and far away (nearest spawn 173 m, none in front)
+  [PASS] dialogue lines are sent to the voice service
+  [PASS] the gang car closes in (distance 173 -> 110 m)
+  [PASS] a gang car that reaches the player rams it (condition 100% -> 94%)
+  [PASS] a pursuer left 230+ m behind for 8 s is shaken off and the player escapes
+  [PASS] police join the chase
+  [PASS] a police car beside a stopped player busts them
+  [PASS] being busted fails the Shadow Run, applies the penalty and marks the player captured
+  [PASS] while captured no new Shadow Run calls are received
+  [PASS] a failed Shadow Run drops the career one level and says so (Level 4 -> 3, 0 XP lost)
+  [PASS] paying bail / release restores Shadow Run calls
+  [PASS] the Shadow Run can be started again
+  [PASS] a roadblock of two police cars is set up on the route
+  [PASS] the smoke launcher works on a nearby pursuer
+  [PASS] weapons have a cooldown
+  [PASS] abandoning the Shadow Run ends the chase and clears the active mission
+  [PASS] Shadow mode ends with the mission
+
+App-open cinematic intro
+  [PASS] intro plays
+  [PASS] cinematic post-processing (bloom / grade / vignette) is active
+  [PASS] intro drives the camera and reveals the logo
+  [PASS] intro reached the hero shot
+  [PASS] loading tips rotate
+  [PASS] intro ends by itself and hands control back (progress 1.00)
+  [PASS] camera is handed back to the chase camera
+
+City boundary: the car cannot leave the city
+  [PASS] four solid barrier walls surround the city
+  [PASS] a car found outside the city is brought back inside
+  [PASS] the barrier stands 28 m beyond the last road
+
+Scene transitions: chunk streaming while the car is moved across the city
+  [PASS] chunk streamer present
+  streamed 10 chunk scenes after the move, 8 loaded now, avg load 1.20s, max 4.60s
+  [PASS] chunks around the new position loaded without errors
+  [PASS] new chunks were streamed in
+Render profile of everything currently loaded (active renderers, visible LOD levels not separated)
+  active MeshRenderers: 1911 (shadow casters 1883), LODGroups 656
+  inside the camera frustum: 533 renderers, 3,00,130 triangles (before LOD selection; each renderer is >= 1 draw call per material)
+  top contributors by triangles (all loaded):
+    LOD building: FacPlasterPeach                renderers   334  triangles    93,572
+    LOD building: FacPlasterCool                 renderers   300  triangles    80,352
+    LOD building: FacPlasterGreen                renderers   172  triangles    77,456
+    LOD building: FacPlasterWarm                 renderers   354  triangles    73,196
+    M_TrafficPaint5                              renderers     5  triangles    69,775
+    M_TreeBark                                   renderers    68  triangles    62,896
+    M_MapVertex                                  renderers     7  triangles    35,620
+    M_TrafficPaint0                              renderers     2  triangles    27,940
+    M_TrafficPaint4                              renderers     2  triangles    27,838
+    M_TrafficPaint6                              renderers     2  triangles    27,778
+    M_LeafNeem                                   renderers     8  triangles    22,044
+    MetalDark                                    renderers     8  triangles    14,176
+  distinct materials: 92, GPU-instancing enabled on 1 of them
+
+Runtime exception / error capture (Application.logMessageReceived, whole run)
+  game-code exceptions/errors: 0   test-runner errors: 0
+  [PASS] no exceptions or errors from game code during driving, navigation, map and streaming
+
+RESULT: 180/180 checks passed - ALL PASSED

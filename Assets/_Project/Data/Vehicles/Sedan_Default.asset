@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d3ec62e397d74418a9e43be97838fd, type: 3}
+  m_Name: Sedan_Default
+  m_EditorClassIdentifier: CityDriver.Runtime::CityDriver.Vehicle.VehicleStats
+  displayName: City Sedan
+  mass: 1300
+  centerOfMass: {x: 0, y: 0.4, z: 0.1}
+  linearDamping: 0.02
+  angularDamping: 0.8
+  maxAngularVelocity: 6
+  maxMotorTorque: 1300
+  maxSpeedKmh: 140
+  maxReverseSpeedKmh: 30
+  reverseTorqueFactor: 0.6
+  drivenWheels: 1
+  torqueBySpeed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.45
+      value: 0.85
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.85
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxBrakeTorque: 620
+  frontBrakeBias: 0.6
+  handbrakeTorque: 2500
+  idleBrakeTorque: 250
+  coastBrakeTorque: 60
+  maxSteerAngleLow: 32
+  minSteerAngle: 1
+  steerGripLimit: 8.5
+  steerRate: 110
+  steerReturnRate: 200
+  suspensionDistance: 0.22
+  spring: 32000
+  damper: 4200
+  targetPosition: 0.5
+  wheelMass: 20
+  wheelDampingRate: 0.25
+  antiRollFront: 6000
+  antiRollRear: 4500
+  forwardStiffness: 1.3
+  sidewaysStiffness: 1.3
+  downforce: 2
+  yawAssist: 0.4
+  yawAssistTorque: 2500
+  uprightAssistStartAngle: 40
+  uprightTorque: 5000
+  autoRecoverDelay: 3
+  upshiftSpeedsKmh:
+  - 25
+  - 50
+  - 80
+  - 110
+  shiftHysteresisKmh: 4
+  substepSpeed: 6
+  substepsBelowSpeed: 8
+  substepsAboveSpeed: 4

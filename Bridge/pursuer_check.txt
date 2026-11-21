@@ -1,0 +1,23 @@
+TrafficCarSet prefab: True, component: True
+  police: 16870 verts, 11 submeshes, bounds (2.14, 1.62, 4.89)
+  policeSuv: 17034 verts, 11 submeshes, bounds (2.18, 1.86, 4.77)
+  gang: 16860 verts, 11 submeshes, bounds (2.22, 1.78, 4.97)
+  baseMaterials[0] = M_TrafficPaint0 / Universal Render Pipeline/Lit
+  baseMaterials[1] = M_CarGlass / Universal Render Pipeline/Lit
+  baseMaterials[2] = M_CarTrim / Universal Render Pipeline/Lit
+  baseMaterials[3] = M_CarChrome / Universal Render Pipeline/Lit
+  baseMaterials[4] = M_CarTyre / Universal Render Pipeline/Lit
+  baseMaterials[5] = M_CarRimDark / Universal Render Pipeline/Lit
+  baseMaterials[6] = M_CarHeadlight / Universal Render Pipeline/Lit
+  baseMaterials[7] = M_CarTaillight / Universal Render Pipeline/Lit
+  baseMaterials[8] = M_CarAccent / Universal Render Pipeline/Lit
+  baseMaterials[9] = M_CarBarRedOn / Universal Render Pipeline/Lit
+  baseMaterials[10] = M_CarBarBlueOff / Universal Render Pipeline/Lit
+  paints: 8
+  paints[0] = M_TrafficPaint0
+  paints[1] = M_TrafficPaint1
+  paints[2] = M_TrafficPaint2
+  gang array: 11
+  gang materials: 11, nulls 0, first M_TrafficPaint1
+  police array: 11
+  police materials: 11, nulls 0, first M_TrafficPaint0

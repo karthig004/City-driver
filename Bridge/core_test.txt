@@ -1,0 +1,76 @@
+
+New game
+  [PASS] starts with ₹5,000, 0 XP, level 1
+  [PASS] owns exactly one starter sedan
+  [PASS] no Shadow Pass / weapon shop at start
+
+Wallet
+  [PASS] first apply succeeds
+  [PASS] same transaction id is rejected (no double payment)
+  [PASS] balance changed exactly once
+  [PASS] balance may go negative (debt)
+  [PASS] ledger records history with running balance
+  [PASS] cannot spend while in debt
+  [PASS] XP and wallet are independent
+
+Career catalog
+  [PASS] 30 missions
+  [PASS] exactly 3 missions per level, 10 levels
+  [PASS] mission ids are unique
+  [PASS] level 1 rewards 300 / 600 / 500
+  [PASS] levels 1-3 are Normal Driver missions
+  [PASS] levels 4-10 are Shadow Run with a failure penalty
+  [PASS] every mission has briefing, completion and failure criteria
+
+Mission rewards
+  [PASS] first completion pays full reward and XP
+  [PASS] mission recorded as completed
+  [PASS] replay pays 25% cash and no extra XP
+  [PASS] time/safe-driving bonus is added to the reward
+
+Level progression
+  [PASS] cannot advance with no missions done: Complete 'First Ride' first.
+  [PASS] cannot advance with 2 of 3 missions: Complete 'Safe Driver' first.
+  [PASS] level 1 -> 2 once all three are done (no upgrade needed)
+  [PASS] level 2 blocked by missing mandatory upgrade: Upgrade Tires to level 1 (currently 0).
+  [PASS] level 2 -> 3 after the upgrade
+  [PASS] Shadow Pass not yet granted during level 3
+  [PASS] Shadow Pass unlocks at the end of level 3
+  [PASS] weapon shop unlocks after level 5
+  [PASS] level is capped at 10
+
+Shadow Run eligibility (exact brief formula, full truth table)
+  [PASS] all 160 combinations match: level>=3 && pass && wallet>0 && !active && !captured
+
+Shadow Run penalties and debt recovery
+  [PASS] eligible at level 4 with pass and positive wallet
+  [PASS] an active Shadow mission blocks further calls
+  [PASS] failure applies the penalty
+  [PASS] calling fail again for the same attempt does NOT charge twice
+  [PASS] active Shadow flag cleared after failure
+  [PASS] no new Shadow calls at zero or below
+  [PASS] Normal Driver missions stay playable while in debt
+  [PASS] still in debt after some normal earnings (balance -800): no Shadow calls yet
+  [PASS] debt recovery: a positive balance re-enables Shadow Run calls
+  [PASS] a balance of exactly zero still blocks Shadow Run calls
+  [PASS] captured blocks Shadow calls
+
+Saving
+  [PASS] wallet, XP and level round-trip
+  [PASS] missions and per-vehicle upgrades round-trip
+  [PASS] negative wallet round-trips
+  [PASS] applied transaction ids survive a reload (no duplicate penalty after restart)
+  [PASS] corrupt main save falls back to the backup
+  [PASS] unreadable save with no backup starts a clean new game instead of crashing
+  [PASS] file storage writes atomically and keeps a .bak, no stray .tmp
+  [PASS] file save survives a fresh load (simulated app restart)
+
+Garage
+  [PASS] buying an upgrade raises its level
+  [PASS] and charges the price
+  [PASS] upgrades are independent per vehicle
+  [PASS] next level can be bought and costs more
+  [PASS] cannot buy without money: Need ₹500.
+  [PASS] repair restores condition and charges proportionally
+
+RESULT: 56/56 checks passed - ALL PASSED

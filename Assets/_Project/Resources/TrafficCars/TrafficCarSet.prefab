@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7190028233124157020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5649856330817154711}
+  - component: {fileID: 3303029128202126189}
+  m_Layer: 0
+  m_Name: TrafficCarSet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5649856330817154711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190028233124157020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3303029128202126189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190028233124157020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57d2ab49b2d1930458aca537dc766ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: CityDriver.Runtime::CityDriver.Population.TrafficCarSet
+  traffic:
+  - {fileID: 4300000, guid: c52e0ce0ff8f3884595b3d8046a24657, type: 2}
+  - {fileID: 4300000, guid: a38b81e528ac89947ba2ebabf959822a, type: 2}
+  - {fileID: 4300000, guid: 1788a668c6c884d4eb0f95439850093b, type: 2}
+  - {fileID: 4300000, guid: d730277bbebe14142a82857dae8645a3, type: 2}
+  police: {fileID: 4300000, guid: 0cf1fee6d2719144d80f5c3bda5f9799, type: 2}
+  policeSuv: {fileID: 4300000, guid: fea7afe7f05b2884a802ad4b08154ae3, type: 2}
+  gang: {fileID: 4300000, guid: 82f88ef2d0e84ff418c574dc1d75fe5f, type: 2}
+  baseMaterials:
+  - {fileID: 2100000, guid: 623c9ee6b8fcd8a419e39f58572630ec, type: 2}
+  - {fileID: 2100000, guid: 970f17306f8659a46aaf1d1df60a6b8c, type: 2}
+  - {fileID: 2100000, guid: 097d58abebc0a984eae5f50ad65fb4b6, type: 2}
+  - {fileID: 2100000, guid: 6a2f30dca3312234b99a252eaa4e20d4, type: 2}
+  - {fileID: 2100000, guid: 98c8edcb016683d45b4a10f58e33f832, type: 2}
+  - {fileID: 2100000, guid: 75546007de882ff41869a1881659189e, type: 2}
+  - {fileID: 2100000, guid: 8414614ff4689b744b7e74df201d9bbd, type: 2}
+  - {fileID: 2100000, guid: 0d3dd2081317f034583376822f95e180, type: 2}
+  - {fileID: 2100000, guid: 47f120adbe514b145a99b9b68e024533, type: 2}
+  - {fileID: 2100000, guid: c6bee31b0812aaa4796a4da5c809148f, type: 2}
+  - {fileID: 2100000, guid: b6a13875435154b469dd9d5f94c85866, type: 2}
+  paints:
+  - {fileID: 2100000, guid: 623c9ee6b8fcd8a419e39f58572630ec, type: 2}
+  - {fileID: 2100000, guid: 4c9f39790e169384184f873e6079b688, type: 2}
+  - {fileID: 2100000, guid: 50138aa63055a744bb8f63cfd4ddca3f, type: 2}
+  - {fileID: 2100000, guid: e435aeb3a4a53cf47ba03f9754fc9ed5, type: 2}
+  - {fileID: 2100000, guid: e5c7215a07734cd4e886476766ed2190, type: 2}
+  - {fileID: 2100000, guid: 04703e15e3cdd4c4284eac2b1578fd0c, type: 2}
+  - {fileID: 2100000, guid: de59d2ab15719944f908daa64bb6bf42, type: 2}
+  - {fileID: 2100000, guid: f28ad7dbdefb5e64a8b4cc5851512fdb, type: 2}
+  barRedOn: {fileID: 2100000, guid: c6bee31b0812aaa4796a4da5c809148f, type: 2}
+  barRedOff: {fileID: 2100000, guid: 207daa1369839694f97a2da7dbe4a159, type: 2}
+  barBlueOn: {fileID: 2100000, guid: 1802a035692346f4d89e59018800b1a0, type: 2}
+  barBlueOff: {fileID: 2100000, guid: b6a13875435154b469dd9d5f94c85866, type: 2}

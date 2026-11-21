@@ -1,0 +1,6686 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d845bb1e1b87e4dbc58a286650fd3e, type: 3}
+  m_Name: CityRoadGraph
+  m_EditorClassIdentifier: CityDriver.Runtime::CityDriver.World.RoadGraphAsset
+  data:
+    nodes:
+    - id: 0
+      position: {x: -960, y: 0, z: -960}
+      signalised: 0
+      district: 5
+    - id: 1
+      position: {x: -960, y: 0, z: -840}
+      signalised: 0
+      district: 5
+    - id: 2
+      position: {x: -960, y: 0, z: -720}
+      signalised: 1
+      district: 5
+    - id: 3
+      position: {x: -960, y: 0, z: -600}
+      signalised: 0
+      district: 5
+    - id: 4
+      position: {x: -960, y: 0, z: -480}
+      signalised: 1
+      district: 5
+    - id: 5
+      position: {x: -960, y: 0, z: -360}
+      signalised: 0
+      district: 5
+    - id: 6
+      position: {x: -960, y: 0, z: -240}
+      signalised: 1
+      district: 5
+    - id: 7
+      position: {x: -960, y: 0, z: -160}
+      signalised: 1
+      district: 5
+    - id: 8
+      position: {x: -960, y: 0, z: -80}
+      signalised: 1
+      district: 5
+    - id: 9
+      position: {x: -960, y: 0, z: 0}
+      signalised: 1
+      district: 5
+    - id: 10
+      position: {x: -960, y: 0, z: 80}
+      signalised: 1
+      district: 5
+    - id: 11
+      position: {x: -960, y: 0, z: 160}
+      signalised: 1
+      district: 5
+    - id: 12
+      position: {x: -960, y: 0, z: 240}
+      signalised: 1
+      district: 5
+    - id: 13
+      position: {x: -960, y: 0, z: 360}
+      signalised: 1
+      district: 5
+    - id: 14
+      position: {x: -960, y: 0, z: 480}
+      signalised: 1
+      district: 5
+    - id: 15
+      position: {x: -960, y: 0, z: 600}
+      signalised: 1
+      district: 5
+    - id: 16
+      position: {x: -960, y: 0, z: 720}
+      signalised: 1
+      district: 5
+    - id: 17
+      position: {x: -960, y: 0, z: 840}
+      signalised: 1
+      district: 5
+    - id: 18
+      position: {x: -960, y: 0, z: 960}
+      signalised: 0
+      district: 5
+    - id: 19
+      position: {x: -840, y: 0, z: -960}
+      signalised: 0
+      district: 5
+    - id: 20
+      position: {x: -840, y: 0, z: -720}
+      signalised: 0
+      district: 3
+    - id: 21
+      position: {x: -840, y: 0, z: -480}
+      signalised: 0
+      district: 3
+    - id: 22
+      position: {x: -840, y: 0, z: -240}
+      signalised: 0
+      district: 0
+    - id: 23
+      position: {x: -840, y: 0, z: -160}
+      signalised: 0
+      district: 0
+    - id: 24
+      position: {x: -840, y: 0, z: -80}
+      signalised: 0
+      district: 0
+    - id: 25
+      position: {x: -840, y: 0, z: 0}
+      signalised: 0
+      district: 0
+    - id: 26
+      position: {x: -840, y: 0, z: 80}
+      signalised: 0
+      district: 0
+    - id: 27
+      position: {x: -840, y: 0, z: 160}
+      signalised: 0
+      district: 0
+    - id: 28
+      position: {x: -840, y: 0, z: 240}
+      signalised: 0
+      district: 0
+    - id: 29
+      position: {x: -840, y: 0, z: 360}
+      signalised: 0
+      district: 0
+    - id: 30
+      position: {x: -840, y: 0, z: 480}
+      signalised: 1
+      district: 0
+    - id: 31
+      position: {x: -840, y: 0, z: 600}
+      signalised: 0
+      district: 0
+    - id: 32
+      position: {x: -840, y: 0, z: 720}
+      signalised: 1
+      district: 0
+    - id: 33
+      position: {x: -840, y: 0, z: 840}
+      signalised: 0
+      district: 0
+    - id: 34
+      position: {x: -840, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 35
+      position: {x: -720, y: 0, z: -960}
+      signalised: 1
+      district: 5
+    - id: 36
+      position: {x: -720, y: 0, z: -840}
+      signalised: 0
+      district: 3
+    - id: 37
+      position: {x: -720, y: 0, z: -720}
+      signalised: 1
+      district: 3
+    - id: 38
+      position: {x: -720, y: 0, z: -600}
+      signalised: 0
+      district: 3
+    - id: 39
+      position: {x: -720, y: 0, z: -480}
+      signalised: 1
+      district: 3
+    - id: 40
+      position: {x: -720, y: 0, z: -360}
+      signalised: 0
+      district: 3
+    - id: 41
+      position: {x: -720, y: 0, z: -240}
+      signalised: 1
+      district: 0
+    - id: 42
+      position: {x: -720, y: 0, z: -160}
+      signalised: 1
+      district: 0
+    - id: 43
+      position: {x: -720, y: 0, z: -80}
+      signalised: 1
+      district: 0
+    - id: 44
+      position: {x: -720, y: 0, z: 0}
+      signalised: 1
+      district: 0
+    - id: 45
+      position: {x: -720, y: 0, z: 80}
+      signalised: 1
+      district: 0
+    - id: 46
+      position: {x: -720, y: 0, z: 160}
+      signalised: 1
+      district: 0
+    - id: 47
+      position: {x: -720, y: 0, z: 240}
+      signalised: 1
+      district: 0
+    - id: 48
+      position: {x: -720, y: 0, z: 360}
+      signalised: 1
+      district: 0
+    - id: 49
+      position: {x: -720, y: 0, z: 480}
+      signalised: 1
+      district: 0
+    - id: 50
+      position: {x: -720, y: 0, z: 600}
+      signalised: 1
+      district: 0
+    - id: 51
+      position: {x: -720, y: 0, z: 720}
+      signalised: 1
+      district: 0
+    - id: 52
+      position: {x: -720, y: 0, z: 840}
+      signalised: 1
+      district: 0
+    - id: 53
+      position: {x: -720, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 54
+      position: {x: -600, y: 0, z: -960}
+      signalised: 0
+      district: 5
+    - id: 55
+      position: {x: -600, y: 0, z: -720}
+      signalised: 0
+      district: 3
+    - id: 56
+      position: {x: -600, y: 0, z: -480}
+      signalised: 0
+      district: 3
+    - id: 57
+      position: {x: -600, y: 0, z: -240}
+      signalised: 0
+      district: 0
+    - id: 58
+      position: {x: -600, y: 0, z: -160}
+      signalised: 0
+      district: 0
+    - id: 59
+      position: {x: -600, y: 0, z: -80}
+      signalised: 0
+      district: 0
+    - id: 60
+      position: {x: -600, y: 0, z: 0}
+      signalised: 0
+      district: 0
+    - id: 61
+      position: {x: -600, y: 0, z: 80}
+      signalised: 0
+      district: 0
+    - id: 62
+      position: {x: -600, y: 0, z: 160}
+      signalised: 0
+      district: 0
+    - id: 63
+      position: {x: -600, y: 0, z: 240}
+      signalised: 0
+      district: 0
+    - id: 64
+      position: {x: -600, y: 0, z: 360}
+      signalised: 0
+      district: 0
+    - id: 65
+      position: {x: -600, y: 0, z: 480}
+      signalised: 1
+      district: 0
+    - id: 66
+      position: {x: -600, y: 0, z: 600}
+      signalised: 0
+      district: 0
+    - id: 67
+      position: {x: -600, y: 0, z: 720}
+      signalised: 1
+      district: 0
+    - id: 68
+      position: {x: -600, y: 0, z: 840}
+      signalised: 0
+      district: 0
+    - id: 69
+      position: {x: -600, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 70
+      position: {x: -480, y: 0, z: -960}
+      signalised: 1
+      district: 5
+    - id: 71
+      position: {x: -480, y: 0, z: -840}
+      signalised: 0
+      district: 3
+    - id: 72
+      position: {x: -480, y: 0, z: -720}
+      signalised: 1
+      district: 3
+    - id: 73
+      position: {x: -480, y: 0, z: -600}
+      signalised: 0
+      district: 3
+    - id: 74
+      position: {x: -480, y: 0, z: -480}
+      signalised: 1
+      district: 3
+    - id: 75
+      position: {x: -480, y: 0, z: -360}
+      signalised: 0
+      district: 3
+    - id: 76
+      position: {x: -480, y: 0, z: -240}
+      signalised: 1
+      district: 0
+    - id: 77
+      position: {x: -480, y: 0, z: -160}
+      signalised: 1
+      district: 0
+    - id: 78
+      position: {x: -480, y: 0, z: -80}
+      signalised: 1
+      district: 0
+    - id: 79
+      position: {x: -480, y: 0, z: 0}
+      signalised: 1
+      district: 0
+    - id: 80
+      position: {x: -480, y: 0, z: 80}
+      signalised: 1
+      district: 0
+    - id: 81
+      position: {x: -480, y: 0, z: 160}
+      signalised: 1
+      district: 0
+    - id: 82
+      position: {x: -480, y: 0, z: 240}
+      signalised: 1
+      district: 0
+    - id: 83
+      position: {x: -480, y: 0, z: 360}
+      signalised: 1
+      district: 0
+    - id: 84
+      position: {x: -480, y: 0, z: 480}
+      signalised: 1
+      district: 0
+    - id: 85
+      position: {x: -480, y: 0, z: 600}
+      signalised: 1
+      district: 0
+    - id: 86
+      position: {x: -480, y: 0, z: 720}
+      signalised: 1
+      district: 0
+    - id: 87
+      position: {x: -480, y: 0, z: 840}
+      signalised: 1
+      district: 0
+    - id: 88
+      position: {x: -480, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 89
+      position: {x: -360, y: 0, z: -960}
+      signalised: 0
+      district: 5
+    - id: 90
+      position: {x: -360, y: 0, z: -720}
+      signalised: 0
+      district: 3
+    - id: 91
+      position: {x: -360, y: 0, z: -480}
+      signalised: 0
+      district: 3
+    - id: 92
+      position: {x: -360, y: 0, z: -240}
+      signalised: 0
+      district: 0
+    - id: 93
+      position: {x: -360, y: 0, z: -160}
+      signalised: 0
+      district: 0
+    - id: 94
+      position: {x: -360, y: 0, z: -80}
+      signalised: 0
+      district: 0
+    - id: 95
+      position: {x: -360, y: 0, z: 0}
+      signalised: 0
+      district: 0
+    - id: 96
+      position: {x: -360, y: 0, z: 80}
+      signalised: 0
+      district: 0
+    - id: 97
+      position: {x: -360, y: 0, z: 160}
+      signalised: 0
+      district: 0
+    - id: 98
+      position: {x: -360, y: 0, z: 240}
+      signalised: 0
+      district: 0
+    - id: 99
+      position: {x: -360, y: 0, z: 360}
+      signalised: 0
+      district: 0
+    - id: 100
+      position: {x: -360, y: 0, z: 480}
+      signalised: 1
+      district: 0
+    - id: 101
+      position: {x: -360, y: 0, z: 600}
+      signalised: 0
+      district: 0
+    - id: 102
+      position: {x: -360, y: 0, z: 720}
+      signalised: 1
+      district: 0
+    - id: 103
+      position: {x: -360, y: 0, z: 840}
+      signalised: 0
+      district: 0
+    - id: 104
+      position: {x: -360, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 105
+      position: {x: -240, y: 0, z: -960}
+      signalised: 1
+      district: 5
+    - id: 106
+      position: {x: -240, y: 0, z: -840}
+      signalised: 0
+      district: 3
+    - id: 107
+      position: {x: -240, y: 0, z: -720}
+      signalised: 1
+      district: 3
+    - id: 108
+      position: {x: -240, y: 0, z: -600}
+      signalised: 0
+      district: 3
+    - id: 109
+      position: {x: -240, y: 0, z: -480}
+      signalised: 1
+      district: 3
+    - id: 110
+      position: {x: -240, y: 0, z: -360}
+      signalised: 0
+      district: 3
+    - id: 111
+      position: {x: -240, y: 0, z: -240}
+      signalised: 1
+      district: 2
+    - id: 112
+      position: {x: -240, y: 0, z: -160}
+      signalised: 0
+      district: 2
+    - id: 113
+      position: {x: -240, y: 0, z: -80}
+      signalised: 0
+      district: 2
+    - id: 114
+      position: {x: -240, y: 0, z: 0}
+      signalised: 1
+      district: 2
+    - id: 115
+      position: {x: -240, y: 0, z: 80}
+      signalised: 0
+      district: 2
+    - id: 116
+      position: {x: -240, y: 0, z: 160}
+      signalised: 0
+      district: 2
+    - id: 117
+      position: {x: -240, y: 0, z: 240}
+      signalised: 1
+      district: 1
+    - id: 118
+      position: {x: -240, y: 0, z: 360}
+      signalised: 0
+      district: 1
+    - id: 119
+      position: {x: -240, y: 0, z: 480}
+      signalised: 1
+      district: 1
+    - id: 120
+      position: {x: -240, y: 0, z: 600}
+      signalised: 0
+      district: 1
+    - id: 121
+      position: {x: -240, y: 0, z: 720}
+      signalised: 1
+      district: 1
+    - id: 122
+      position: {x: -240, y: 0, z: 840}
+      signalised: 0
+      district: 1
+    - id: 123
+      position: {x: -240, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 124
+      position: {x: -160, y: 0, z: -960}
+      signalised: 1
+      district: 5
+    - id: 125
+      position: {x: -160, y: 0, z: -840}
+      signalised: 0
+      district: 3
+    - id: 126
+      position: {x: -160, y: 0, z: -720}
+      signalised: 1
+      district: 3
+    - id: 127
+      position: {x: -160, y: 0, z: -600}
+      signalised: 0
+      district: 3
+    - id: 128
+      position: {x: -160, y: 0, z: -480}
+      signalised: 1
+      district: 3
+    - id: 129
+      position: {x: -160, y: 0, z: -360}
+      signalised: 0
+      district: 3
+    - id: 130
+      position: {x: -160, y: 0, z: -240}
+      signalised: 0
+      district: 2
+    - id: 131
+      position: {x: -160, y: 0, z: -160}
+      signalised: 0
+      district: 2
+    - id: 132
+      position: {x: -160, y: 0, z: -80}
+      signalised: 0
+      district: 2
+    - id: 133
+      position: {x: -160, y: 0, z: 0}
+      signalised: 0
+      district: 2
+    - id: 134
+      position: {x: -160, y: 0, z: 80}
+      signalised: 0
+      district: 2
+    - id: 135
+      position: {x: -160, y: 0, z: 160}
+      signalised: 0
+      district: 2
+    - id: 136
+      position: {x: -160, y: 0, z: 240}
+      signalised: 0
+      district: 1
+    - id: 137
+      position: {x: -160, y: 0, z: 360}
+      signalised: 0
+      district: 1
+    - id: 138
+      position: {x: -160, y: 0, z: 480}
+      signalised: 1
+      district: 1
+    - id: 139
+      position: {x: -160, y: 0, z: 600}
+      signalised: 0
+      district: 1
+    - id: 140
+      position: {x: -160, y: 0, z: 720}
+      signalised: 1
+      district: 1
+    - id: 141
+      position: {x: -160, y: 0, z: 840}
+      signalised: 0
+      district: 1
+    - id: 142
+      position: {x: -160, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 143
+      position: {x: -80, y: 0, z: -960}
+      signalised: 1
+      district: 5
+    - id: 144
+      position: {x: -80, y: 0, z: -840}
+      signalised: 0
+      district: 3
+    - id: 145
+      position: {x: -80, y: 0, z: -720}
+      signalised: 1
+      district: 3
+    - id: 146
+      position: {x: -80, y: 0, z: -600}
+      signalised: 0
+      district: 3
+    - id: 147
+      position: {x: -80, y: 0, z: -480}
+      signalised: 1
+      district: 3
+    - id: 148
+      position: {x: -80, y: 0, z: -360}
+      signalised: 0
+      district: 3
+    - id: 149
+      position: {x: -80, y: 0, z: -240}
+      signalised: 0
+      district: 2
+    - id: 150
+      position: {x: -80, y: 0, z: -160}
+      signalised: 0
+      district: 2
+    - id: 151
+      position: {x: -80, y: 0, z: -80}
+      signalised: 0
+      district: 2
+    - id: 152
+      position: {x: -80, y: 0, z: 0}
+      signalised: 0
+      district: 2
+    - id: 153
+      position: {x: -80, y: 0, z: 80}
+      signalised: 0
+      district: 2
+    - id: 154
+      position: {x: -80, y: 0, z: 160}
+      signalised: 0
+      district: 2
+    - id: 155
+      position: {x: -80, y: 0, z: 240}
+      signalised: 0
+      district: 1
+    - id: 156
+      position: {x: -80, y: 0, z: 360}
+      signalised: 0
+      district: 1
+    - id: 157
+      position: {x: -80, y: 0, z: 480}
+      signalised: 1
+      district: 1
+    - id: 158
+      position: {x: -80, y: 0, z: 600}
+      signalised: 0
+      district: 1
+    - id: 159
+      position: {x: -80, y: 0, z: 720}
+      signalised: 1
+      district: 1
+    - id: 160
+      position: {x: -80, y: 0, z: 840}
+      signalised: 0
+      district: 1
+    - id: 161
+      position: {x: -80, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 162
+      position: {x: 0, y: 0, z: -960}
+      signalised: 1
+      district: 5
+    - id: 163
+      position: {x: 0, y: 0, z: -840}
+      signalised: 0
+      district: 3
+    - id: 164
+      position: {x: 0, y: 0, z: -720}
+      signalised: 1
+      district: 3
+    - id: 165
+      position: {x: 0, y: 0, z: -600}
+      signalised: 0
+      district: 3
+    - id: 166
+      position: {x: 0, y: 0, z: -480}
+      signalised: 1
+      district: 3
+    - id: 167
+      position: {x: 0, y: 0, z: -360}
+      signalised: 0
+      district: 3
+    - id: 168
+      position: {x: 0, y: 0, z: -240}
+      signalised: 1
+      district: 2
+    - id: 169
+      position: {x: 0, y: 0, z: -160}
+      signalised: 0
+      district: 2
+    - id: 170
+      position: {x: 0, y: 0, z: -80}
+      signalised: 0
+      district: 2
+    - id: 171
+      position: {x: 0, y: 0, z: 0}
+      signalised: 1
+      district: 2
+    - id: 172
+      position: {x: 0, y: 0, z: 80}
+      signalised: 0
+      district: 2
+    - id: 173
+      position: {x: 0, y: 0, z: 160}
+      signalised: 0
+      district: 2
+    - id: 174
+      position: {x: 0, y: 0, z: 240}
+      signalised: 1
+      district: 1
+    - id: 175
+      position: {x: 0, y: 0, z: 360}
+      signalised: 0
+      district: 1
+    - id: 176
+      position: {x: 0, y: 0, z: 480}
+      signalised: 1
+      district: 1
+    - id: 177
+      position: {x: 0, y: 0, z: 600}
+      signalised: 0
+      district: 1
+    - id: 178
+      position: {x: 0, y: 0, z: 720}
+      signalised: 1
+      district: 1
+    - id: 179
+      position: {x: 0, y: 0, z: 840}
+      signalised: 0
+      district: 1
+    - id: 180
+      position: {x: 0, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 181
+      position: {x: 80, y: 0, z: -960}
+      signalised: 1
+      district: 5
+    - id: 182
+      position: {x: 80, y: 0, z: -840}
+      signalised: 0
+      district: 3
+    - id: 183
+      position: {x: 80, y: 0, z: -720}
+      signalised: 1
+      district: 3
+    - id: 184
+      position: {x: 80, y: 0, z: -600}
+      signalised: 0
+      district: 3
+    - id: 185
+      position: {x: 80, y: 0, z: -480}
+      signalised: 1
+      district: 3
+    - id: 186
+      position: {x: 80, y: 0, z: -360}
+      signalised: 0
+      district: 3
+    - id: 187
+      position: {x: 80, y: 0, z: -240}
+      signalised: 0
+      district: 2
+    - id: 188
+      position: {x: 80, y: 0, z: -160}
+      signalised: 0
+      district: 2
+    - id: 189
+      position: {x: 80, y: 0, z: -80}
+      signalised: 0
+      district: 2
+    - id: 190
+      position: {x: 80, y: 0, z: 0}
+      signalised: 0
+      district: 2
+    - id: 191
+      position: {x: 80, y: 0, z: 80}
+      signalised: 0
+      district: 2
+    - id: 192
+      position: {x: 80, y: 0, z: 160}
+      signalised: 0
+      district: 2
+    - id: 193
+      position: {x: 80, y: 0, z: 240}
+      signalised: 0
+      district: 1
+    - id: 194
+      position: {x: 80, y: 0, z: 360}
+      signalised: 0
+      district: 1
+    - id: 195
+      position: {x: 80, y: 0, z: 480}
+      signalised: 1
+      district: 1
+    - id: 196
+      position: {x: 80, y: 0, z: 600}
+      signalised: 0
+      district: 1
+    - id: 197
+      position: {x: 80, y: 0, z: 720}
+      signalised: 1
+      district: 1
+    - id: 198
+      position: {x: 80, y: 0, z: 840}
+      signalised: 0
+      district: 1
+    - id: 199
+      position: {x: 80, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 200
+      position: {x: 160, y: 0, z: -960}
+      signalised: 1
+      district: 5
+    - id: 201
+      position: {x: 160, y: 0, z: -840}
+      signalised: 0
+      district: 3
+    - id: 202
+      position: {x: 160, y: 0, z: -720}
+      signalised: 1
+      district: 3
+    - id: 203
+      position: {x: 160, y: 0, z: -600}
+      signalised: 0
+      district: 3
+    - id: 204
+      position: {x: 160, y: 0, z: -480}
+      signalised: 1
+      district: 3
+    - id: 205
+      position: {x: 160, y: 0, z: -360}
+      signalised: 0
+      district: 3
+    - id: 206
+      position: {x: 160, y: 0, z: -240}
+      signalised: 0
+      district: 2
+    - id: 207
+      position: {x: 160, y: 0, z: -160}
+      signalised: 0
+      district: 2
+    - id: 208
+      position: {x: 160, y: 0, z: -80}
+      signalised: 0
+      district: 2
+    - id: 209
+      position: {x: 160, y: 0, z: 0}
+      signalised: 0
+      district: 2
+    - id: 210
+      position: {x: 160, y: 0, z: 80}
+      signalised: 0
+      district: 2
+    - id: 211
+      position: {x: 160, y: 0, z: 160}
+      signalised: 0
+      district: 2
+    - id: 212
+      position: {x: 160, y: 0, z: 240}
+      signalised: 0
+      district: 1
+    - id: 213
+      position: {x: 160, y: 0, z: 360}
+      signalised: 0
+      district: 1
+    - id: 214
+      position: {x: 160, y: 0, z: 480}
+      signalised: 1
+      district: 1
+    - id: 215
+      position: {x: 160, y: 0, z: 600}
+      signalised: 0
+      district: 1
+    - id: 216
+      position: {x: 160, y: 0, z: 720}
+      signalised: 1
+      district: 1
+    - id: 217
+      position: {x: 160, y: 0, z: 840}
+      signalised: 0
+      district: 1
+    - id: 218
+      position: {x: 160, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 219
+      position: {x: 240, y: 0, z: -960}
+      signalised: 1
+      district: 5
+    - id: 220
+      position: {x: 240, y: 0, z: -840}
+      signalised: 0
+      district: 1
+    - id: 221
+      position: {x: 240, y: 0, z: -720}
+      signalised: 1
+      district: 1
+    - id: 222
+      position: {x: 240, y: 0, z: -600}
+      signalised: 0
+      district: 1
+    - id: 223
+      position: {x: 240, y: 0, z: -480}
+      signalised: 1
+      district: 1
+    - id: 224
+      position: {x: 240, y: 0, z: -360}
+      signalised: 0
+      district: 1
+    - id: 225
+      position: {x: 240, y: 0, z: -240}
+      signalised: 1
+      district: 6
+    - id: 226
+      position: {x: 240, y: 0, z: -160}
+      signalised: 0
+      district: 6
+    - id: 227
+      position: {x: 240, y: 0, z: -80}
+      signalised: 0
+      district: 6
+    - id: 228
+      position: {x: 240, y: 0, z: 0}
+      signalised: 1
+      district: 6
+    - id: 229
+      position: {x: 240, y: 0, z: 80}
+      signalised: 0
+      district: 6
+    - id: 230
+      position: {x: 240, y: 0, z: 160}
+      signalised: 0
+      district: 6
+    - id: 231
+      position: {x: 240, y: 0, z: 240}
+      signalised: 1
+      district: 4
+    - id: 232
+      position: {x: 240, y: 0, z: 360}
+      signalised: 0
+      district: 4
+    - id: 233
+      position: {x: 240, y: 0, z: 480}
+      signalised: 1
+      district: 4
+    - id: 234
+      position: {x: 240, y: 0, z: 600}
+      signalised: 0
+      district: 4
+    - id: 235
+      position: {x: 240, y: 0, z: 720}
+      signalised: 1
+      district: 4
+    - id: 236
+      position: {x: 240, y: 0, z: 840}
+      signalised: 0
+      district: 4
+    - id: 237
+      position: {x: 240, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 238
+      position: {x: 360, y: 0, z: -960}
+      signalised: 0
+      district: 5
+    - id: 239
+      position: {x: 360, y: 0, z: -720}
+      signalised: 0
+      district: 1
+    - id: 240
+      position: {x: 360, y: 0, z: -480}
+      signalised: 0
+      district: 1
+    - id: 241
+      position: {x: 360, y: 0, z: -240}
+      signalised: 0
+      district: 6
+    - id: 242
+      position: {x: 360, y: 0, z: -160}
+      signalised: 0
+      district: 6
+    - id: 243
+      position: {x: 360, y: 0, z: -80}
+      signalised: 0
+      district: 6
+    - id: 244
+      position: {x: 360, y: 0, z: 0}
+      signalised: 0
+      district: 6
+    - id: 245
+      position: {x: 360, y: 0, z: 80}
+      signalised: 0
+      district: 6
+    - id: 246
+      position: {x: 360, y: 0, z: 160}
+      signalised: 0
+      district: 6
+    - id: 247
+      position: {x: 360, y: 0, z: 240}
+      signalised: 0
+      district: 4
+    - id: 248
+      position: {x: 360, y: 0, z: 360}
+      signalised: 0
+      district: 4
+    - id: 249
+      position: {x: 360, y: 0, z: 480}
+      signalised: 1
+      district: 4
+    - id: 250
+      position: {x: 360, y: 0, z: 600}
+      signalised: 0
+      district: 4
+    - id: 251
+      position: {x: 360, y: 0, z: 720}
+      signalised: 1
+      district: 4
+    - id: 252
+      position: {x: 360, y: 0, z: 840}
+      signalised: 0
+      district: 4
+    - id: 253
+      position: {x: 360, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 254
+      position: {x: 480, y: 0, z: -960}
+      signalised: 1
+      district: 5
+    - id: 255
+      position: {x: 480, y: 0, z: -840}
+      signalised: 0
+      district: 1
+    - id: 256
+      position: {x: 480, y: 0, z: -720}
+      signalised: 1
+      district: 1
+    - id: 257
+      position: {x: 480, y: 0, z: -600}
+      signalised: 0
+      district: 1
+    - id: 258
+      position: {x: 480, y: 0, z: -480}
+      signalised: 1
+      district: 1
+    - id: 259
+      position: {x: 480, y: 0, z: -360}
+      signalised: 0
+      district: 1
+    - id: 260
+      position: {x: 480, y: 0, z: -240}
+      signalised: 1
+      district: 6
+    - id: 261
+      position: {x: 480, y: 0, z: -160}
+      signalised: 1
+      district: 6
+    - id: 262
+      position: {x: 480, y: 0, z: -80}
+      signalised: 1
+      district: 6
+    - id: 263
+      position: {x: 480, y: 0, z: 0}
+      signalised: 1
+      district: 6
+    - id: 264
+      position: {x: 480, y: 0, z: 80}
+      signalised: 1
+      district: 6
+    - id: 265
+      position: {x: 480, y: 0, z: 160}
+      signalised: 1
+      district: 6
+    - id: 266
+      position: {x: 480, y: 0, z: 240}
+      signalised: 1
+      district: 4
+    - id: 267
+      position: {x: 480, y: 0, z: 360}
+      signalised: 1
+      district: 4
+    - id: 268
+      position: {x: 480, y: 0, z: 480}
+      signalised: 1
+      district: 4
+    - id: 269
+      position: {x: 480, y: 0, z: 600}
+      signalised: 1
+      district: 4
+    - id: 270
+      position: {x: 480, y: 0, z: 720}
+      signalised: 1
+      district: 4
+    - id: 271
+      position: {x: 480, y: 0, z: 840}
+      signalised: 1
+      district: 4
+    - id: 272
+      position: {x: 480, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 273
+      position: {x: 600, y: 0, z: -960}
+      signalised: 0
+      district: 5
+    - id: 274
+      position: {x: 600, y: 0, z: -720}
+      signalised: 0
+      district: 1
+    - id: 275
+      position: {x: 600, y: 0, z: -480}
+      signalised: 0
+      district: 1
+    - id: 276
+      position: {x: 600, y: 0, z: -240}
+      signalised: 0
+      district: 6
+    - id: 277
+      position: {x: 600, y: 0, z: -160}
+      signalised: 0
+      district: 6
+    - id: 278
+      position: {x: 600, y: 0, z: -80}
+      signalised: 0
+      district: 6
+    - id: 279
+      position: {x: 600, y: 0, z: 0}
+      signalised: 0
+      district: 6
+    - id: 280
+      position: {x: 600, y: 0, z: 80}
+      signalised: 0
+      district: 6
+    - id: 281
+      position: {x: 600, y: 0, z: 160}
+      signalised: 0
+      district: 6
+    - id: 282
+      position: {x: 600, y: 0, z: 240}
+      signalised: 0
+      district: 4
+    - id: 283
+      position: {x: 600, y: 0, z: 360}
+      signalised: 0
+      district: 4
+    - id: 284
+      position: {x: 600, y: 0, z: 480}
+      signalised: 1
+      district: 4
+    - id: 285
+      position: {x: 600, y: 0, z: 600}
+      signalised: 0
+      district: 4
+    - id: 286
+      position: {x: 600, y: 0, z: 720}
+      signalised: 1
+      district: 4
+    - id: 287
+      position: {x: 600, y: 0, z: 840}
+      signalised: 0
+      district: 4
+    - id: 288
+      position: {x: 600, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 289
+      position: {x: 720, y: 0, z: -960}
+      signalised: 1
+      district: 5
+    - id: 290
+      position: {x: 720, y: 0, z: -840}
+      signalised: 0
+      district: 1
+    - id: 291
+      position: {x: 720, y: 0, z: -720}
+      signalised: 1
+      district: 1
+    - id: 292
+      position: {x: 720, y: 0, z: -600}
+      signalised: 0
+      district: 1
+    - id: 293
+      position: {x: 720, y: 0, z: -480}
+      signalised: 1
+      district: 1
+    - id: 294
+      position: {x: 720, y: 0, z: -360}
+      signalised: 0
+      district: 1
+    - id: 295
+      position: {x: 720, y: 0, z: -240}
+      signalised: 1
+      district: 6
+    - id: 296
+      position: {x: 720, y: 0, z: -160}
+      signalised: 1
+      district: 6
+    - id: 297
+      position: {x: 720, y: 0, z: -80}
+      signalised: 1
+      district: 6
+    - id: 298
+      position: {x: 720, y: 0, z: 0}
+      signalised: 1
+      district: 6
+    - id: 299
+      position: {x: 720, y: 0, z: 80}
+      signalised: 1
+      district: 6
+    - id: 300
+      position: {x: 720, y: 0, z: 160}
+      signalised: 1
+      district: 6
+    - id: 301
+      position: {x: 720, y: 0, z: 240}
+      signalised: 1
+      district: 4
+    - id: 302
+      position: {x: 720, y: 0, z: 360}
+      signalised: 1
+      district: 4
+    - id: 303
+      position: {x: 720, y: 0, z: 480}
+      signalised: 1
+      district: 4
+    - id: 304
+      position: {x: 720, y: 0, z: 600}
+      signalised: 1
+      district: 4
+    - id: 305
+      position: {x: 720, y: 0, z: 720}
+      signalised: 1
+      district: 4
+    - id: 306
+      position: {x: 720, y: 0, z: 840}
+      signalised: 1
+      district: 4
+    - id: 307
+      position: {x: 720, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 308
+      position: {x: 840, y: 0, z: -960}
+      signalised: 0
+      district: 5
+    - id: 309
+      position: {x: 840, y: 0, z: -720}
+      signalised: 0
+      district: 1
+    - id: 310
+      position: {x: 840, y: 0, z: -480}
+      signalised: 0
+      district: 1
+    - id: 311
+      position: {x: 840, y: 0, z: -240}
+      signalised: 0
+      district: 6
+    - id: 312
+      position: {x: 840, y: 0, z: -160}
+      signalised: 0
+      district: 6
+    - id: 313
+      position: {x: 840, y: 0, z: -80}
+      signalised: 0
+      district: 6
+    - id: 314
+      position: {x: 840, y: 0, z: 0}
+      signalised: 0
+      district: 6
+    - id: 315
+      position: {x: 840, y: 0, z: 80}
+      signalised: 0
+      district: 6
+    - id: 316
+      position: {x: 840, y: 0, z: 160}
+      signalised: 0
+      district: 6
+    - id: 317
+      position: {x: 840, y: 0, z: 240}
+      signalised: 0
+      district: 4
+    - id: 318
+      position: {x: 840, y: 0, z: 360}
+      signalised: 0
+      district: 4
+    - id: 319
+      position: {x: 840, y: 0, z: 480}
+      signalised: 1
+      district: 4
+    - id: 320
+      position: {x: 840, y: 0, z: 600}
+      signalised: 0
+      district: 4
+    - id: 321
+      position: {x: 840, y: 0, z: 720}
+      signalised: 1
+      district: 4
+    - id: 322
+      position: {x: 840, y: 0, z: 840}
+      signalised: 0
+      district: 4
+    - id: 323
+      position: {x: 840, y: 0, z: 960}
+      signalised: 1
+      district: 5
+    - id: 324
+      position: {x: 960, y: 0, z: -960}
+      signalised: 0
+      district: 5
+    - id: 325
+      position: {x: 960, y: 0, z: -840}
+      signalised: 0
+      district: 5
+    - id: 326
+      position: {x: 960, y: 0, z: -720}
+      signalised: 1
+      district: 5
+    - id: 327
+      position: {x: 960, y: 0, z: -600}
+      signalised: 0
+      district: 5
+    - id: 328
+      position: {x: 960, y: 0, z: -480}
+      signalised: 1
+      district: 5
+    - id: 329
+      position: {x: 960, y: 0, z: -360}
+      signalised: 0
+      district: 5
+    - id: 330
+      position: {x: 960, y: 0, z: -240}
+      signalised: 1
+      district: 5
+    - id: 331
+      position: {x: 960, y: 0, z: -160}
+      signalised: 1
+      district: 5
+    - id: 332
+      position: {x: 960, y: 0, z: -80}
+      signalised: 1
+      district: 5
+    - id: 333
+      position: {x: 960, y: 0, z: 0}
+      signalised: 1
+      district: 5
+    - id: 334
+      position: {x: 960, y: 0, z: 80}
+      signalised: 1
+      district: 5
+    - id: 335
+      position: {x: 960, y: 0, z: 160}
+      signalised: 1
+      district: 5
+    - id: 336
+      position: {x: 960, y: 0, z: 240}
+      signalised: 1
+      district: 5
+    - id: 337
+      position: {x: 960, y: 0, z: 360}
+      signalised: 1
+      district: 5
+    - id: 338
+      position: {x: 960, y: 0, z: 480}
+      signalised: 1
+      district: 5
+    - id: 339
+      position: {x: 960, y: 0, z: 600}
+      signalised: 1
+      district: 5
+    - id: 340
+      position: {x: 960, y: 0, z: 720}
+      signalised: 1
+      district: 5
+    - id: 341
+      position: {x: 960, y: 0, z: 840}
+      signalised: 1
+      district: 5
+    - id: 342
+      position: {x: 960, y: 0, z: 960}
+      signalised: 0
+      district: 5
+    edges:
+    - id: 0
+      from: 0
+      to: 19
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 1
+      from: 19
+      to: 35
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 2
+      from: 35
+      to: 54
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 3
+      from: 54
+      to: 70
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 4
+      from: 70
+      to: 89
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 5
+      from: 89
+      to: 105
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 6
+      from: 105
+      to: 124
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 7
+      from: 124
+      to: 143
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 8
+      from: 143
+      to: 162
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 9
+      from: 162
+      to: 181
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 10
+      from: 181
+      to: 200
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 11
+      from: 200
+      to: 219
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 12
+      from: 219
+      to: 238
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 13
+      from: 238
+      to: 254
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 14
+      from: 254
+      to: 273
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 15
+      from: 273
+      to: 289
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 16
+      from: 289
+      to: 308
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 17
+      from: 308
+      to: 324
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 18
+      from: 2
+      to: 20
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 19
+      from: 20
+      to: 37
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 20
+      from: 37
+      to: 55
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 21
+      from: 55
+      to: 72
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 22
+      from: 72
+      to: 90
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 23
+      from: 90
+      to: 107
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 24
+      from: 107
+      to: 126
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 25
+      from: 126
+      to: 145
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 26
+      from: 145
+      to: 164
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 27
+      from: 164
+      to: 183
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 28
+      from: 183
+      to: 202
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 29
+      from: 202
+      to: 221
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 30
+      from: 221
+      to: 239
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 31
+      from: 239
+      to: 256
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 32
+      from: 256
+      to: 274
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 33
+      from: 274
+      to: 291
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 34
+      from: 291
+      to: 309
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 35
+      from: 309
+      to: 326
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 36
+      from: 4
+      to: 21
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 37
+      from: 21
+      to: 39
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 38
+      from: 39
+      to: 56
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 39
+      from: 56
+      to: 74
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 40
+      from: 74
+      to: 91
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 41
+      from: 91
+      to: 109
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 42
+      from: 109
+      to: 128
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 43
+      from: 128
+      to: 147
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 44
+      from: 147
+      to: 166
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 45
+      from: 166
+      to: 185
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 46
+      from: 185
+      to: 204
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 47
+      from: 204
+      to: 223
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 48
+      from: 223
+      to: 240
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 49
+      from: 240
+      to: 258
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 50
+      from: 258
+      to: 275
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 51
+      from: 275
+      to: 293
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 52
+      from: 293
+      to: 310
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 53
+      from: 310
+      to: 328
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 54
+      from: 6
+      to: 22
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 55
+      from: 22
+      to: 41
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 56
+      from: 41
+      to: 57
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 57
+      from: 57
+      to: 76
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 58
+      from: 76
+      to: 92
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 59
+      from: 92
+      to: 111
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 60
+      from: 111
+      to: 130
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 61
+      from: 130
+      to: 149
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 62
+      from: 149
+      to: 168
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 63
+      from: 168
+      to: 187
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 64
+      from: 187
+      to: 206
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 65
+      from: 206
+      to: 225
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 66
+      from: 225
+      to: 241
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 67
+      from: 241
+      to: 260
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 68
+      from: 260
+      to: 276
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 69
+      from: 276
+      to: 295
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 70
+      from: 295
+      to: 311
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 71
+      from: 311
+      to: 330
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 72
+      from: 7
+      to: 23
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 73
+      from: 23
+      to: 42
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 74
+      from: 42
+      to: 58
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 75
+      from: 58
+      to: 77
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 76
+      from: 77
+      to: 93
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 77
+      from: 93
+      to: 112
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 78
+      from: 112
+      to: 131
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 79
+      from: 131
+      to: 150
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 80
+      from: 150
+      to: 169
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 81
+      from: 169
+      to: 188
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 82
+      from: 188
+      to: 207
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 83
+      from: 207
+      to: 226
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 84
+      from: 226
+      to: 242
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 85
+      from: 242
+      to: 261
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 86
+      from: 261
+      to: 277
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 87
+      from: 277
+      to: 296
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 88
+      from: 296
+      to: 312
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 89
+      from: 312
+      to: 331
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 90
+      from: 8
+      to: 24
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 91
+      from: 24
+      to: 43
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 92
+      from: 43
+      to: 59
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 93
+      from: 59
+      to: 78
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 94
+      from: 78
+      to: 94
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 95
+      from: 94
+      to: 113
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 96
+      from: 113
+      to: 132
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 97
+      from: 132
+      to: 151
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 98
+      from: 151
+      to: 170
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 99
+      from: 170
+      to: 189
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 100
+      from: 189
+      to: 208
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 101
+      from: 208
+      to: 227
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 102
+      from: 227
+      to: 243
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 103
+      from: 243
+      to: 262
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 104
+      from: 262
+      to: 278
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 105
+      from: 278
+      to: 297
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 106
+      from: 297
+      to: 313
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 107
+      from: 313
+      to: 332
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 108
+      from: 9
+      to: 25
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 109
+      from: 25
+      to: 44
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 110
+      from: 44
+      to: 60
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 111
+      from: 60
+      to: 79
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 112
+      from: 79
+      to: 95
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 113
+      from: 95
+      to: 114
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 114
+      from: 114
+      to: 133
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 115
+      from: 133
+      to: 152
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 116
+      from: 152
+      to: 171
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 117
+      from: 171
+      to: 190
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 118
+      from: 190
+      to: 209
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 119
+      from: 209
+      to: 228
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 120
+      from: 228
+      to: 244
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 121
+      from: 244
+      to: 263
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 122
+      from: 263
+      to: 279
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 123
+      from: 279
+      to: 298
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 124
+      from: 298
+      to: 314
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 125
+      from: 314
+      to: 333
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 126
+      from: 10
+      to: 26
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 127
+      from: 26
+      to: 45
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 128
+      from: 45
+      to: 61
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 129
+      from: 61
+      to: 80
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 130
+      from: 80
+      to: 96
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 131
+      from: 96
+      to: 115
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 132
+      from: 115
+      to: 134
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 133
+      from: 134
+      to: 153
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 134
+      from: 153
+      to: 172
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 135
+      from: 172
+      to: 191
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 136
+      from: 191
+      to: 210
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 137
+      from: 210
+      to: 229
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 138
+      from: 229
+      to: 245
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 139
+      from: 245
+      to: 264
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 140
+      from: 264
+      to: 280
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 141
+      from: 280
+      to: 299
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 142
+      from: 299
+      to: 315
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 143
+      from: 315
+      to: 334
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 144
+      from: 11
+      to: 27
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 145
+      from: 27
+      to: 46
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 146
+      from: 46
+      to: 62
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 147
+      from: 62
+      to: 81
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 148
+      from: 81
+      to: 97
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 149
+      from: 97
+      to: 116
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 150
+      from: 116
+      to: 135
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 151
+      from: 135
+      to: 154
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 152
+      from: 154
+      to: 173
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 153
+      from: 173
+      to: 192
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 154
+      from: 192
+      to: 211
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 155
+      from: 211
+      to: 230
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 156
+      from: 230
+      to: 246
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 157
+      from: 246
+      to: 265
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 158
+      from: 265
+      to: 281
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 159
+      from: 281
+      to: 300
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 160
+      from: 300
+      to: 316
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 161
+      from: 316
+      to: 335
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 162
+      from: 12
+      to: 28
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 163
+      from: 28
+      to: 47
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 164
+      from: 47
+      to: 63
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 165
+      from: 63
+      to: 82
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 166
+      from: 82
+      to: 98
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 167
+      from: 98
+      to: 117
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 168
+      from: 117
+      to: 136
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 169
+      from: 136
+      to: 155
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 170
+      from: 155
+      to: 174
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 171
+      from: 174
+      to: 193
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 172
+      from: 193
+      to: 212
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 173
+      from: 212
+      to: 231
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 174
+      from: 231
+      to: 247
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 175
+      from: 247
+      to: 266
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 176
+      from: 266
+      to: 282
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 177
+      from: 282
+      to: 301
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 178
+      from: 301
+      to: 317
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 179
+      from: 317
+      to: 336
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 180
+      from: 13
+      to: 29
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 181
+      from: 29
+      to: 48
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 182
+      from: 48
+      to: 64
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 183
+      from: 64
+      to: 83
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 184
+      from: 83
+      to: 99
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 185
+      from: 99
+      to: 118
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 186
+      from: 232
+      to: 248
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 187
+      from: 248
+      to: 267
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 188
+      from: 267
+      to: 283
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 189
+      from: 283
+      to: 302
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 190
+      from: 302
+      to: 318
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 191
+      from: 318
+      to: 337
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 192
+      from: 14
+      to: 30
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 193
+      from: 30
+      to: 49
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 194
+      from: 49
+      to: 65
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 195
+      from: 65
+      to: 84
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 196
+      from: 84
+      to: 100
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 197
+      from: 100
+      to: 119
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 198
+      from: 119
+      to: 138
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 199
+      from: 138
+      to: 157
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 200
+      from: 157
+      to: 176
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 201
+      from: 176
+      to: 195
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 202
+      from: 195
+      to: 214
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 203
+      from: 214
+      to: 233
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 204
+      from: 233
+      to: 249
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 205
+      from: 249
+      to: 268
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 206
+      from: 268
+      to: 284
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 207
+      from: 284
+      to: 303
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 208
+      from: 303
+      to: 319
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 209
+      from: 319
+      to: 338
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 210
+      from: 15
+      to: 31
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 211
+      from: 31
+      to: 50
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 212
+      from: 50
+      to: 66
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 213
+      from: 66
+      to: 85
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 214
+      from: 85
+      to: 101
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 215
+      from: 101
+      to: 120
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 216
+      from: 234
+      to: 250
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 217
+      from: 250
+      to: 269
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 218
+      from: 269
+      to: 285
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 219
+      from: 285
+      to: 304
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 220
+      from: 304
+      to: 320
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 221
+      from: 320
+      to: 339
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 222
+      from: 16
+      to: 32
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 223
+      from: 32
+      to: 51
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 224
+      from: 51
+      to: 67
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 225
+      from: 67
+      to: 86
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 226
+      from: 86
+      to: 102
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 227
+      from: 102
+      to: 121
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 228
+      from: 121
+      to: 140
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 229
+      from: 140
+      to: 159
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 230
+      from: 159
+      to: 178
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 231
+      from: 178
+      to: 197
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 232
+      from: 197
+      to: 216
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 233
+      from: 216
+      to: 235
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 234
+      from: 235
+      to: 251
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 235
+      from: 251
+      to: 270
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 236
+      from: 270
+      to: 286
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 237
+      from: 286
+      to: 305
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 238
+      from: 305
+      to: 321
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 239
+      from: 321
+      to: 340
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 240
+      from: 17
+      to: 33
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 241
+      from: 33
+      to: 52
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 242
+      from: 52
+      to: 68
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 243
+      from: 68
+      to: 87
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 244
+      from: 87
+      to: 103
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 245
+      from: 103
+      to: 122
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 246
+      from: 236
+      to: 252
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 247
+      from: 252
+      to: 271
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 248
+      from: 271
+      to: 287
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 249
+      from: 287
+      to: 306
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 250
+      from: 306
+      to: 322
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 251
+      from: 322
+      to: 341
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 252
+      from: 18
+      to: 34
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 253
+      from: 34
+      to: 53
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 254
+      from: 53
+      to: 69
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 255
+      from: 69
+      to: 88
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 256
+      from: 88
+      to: 104
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 257
+      from: 104
+      to: 123
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 258
+      from: 123
+      to: 142
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 259
+      from: 142
+      to: 161
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 260
+      from: 161
+      to: 180
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 261
+      from: 180
+      to: 199
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 262
+      from: 199
+      to: 218
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 263
+      from: 218
+      to: 237
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 264
+      from: 237
+      to: 253
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 265
+      from: 253
+      to: 272
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 266
+      from: 272
+      to: 288
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 267
+      from: 288
+      to: 307
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 268
+      from: 307
+      to: 323
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 269
+      from: 323
+      to: 342
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 270
+      from: 0
+      to: 1
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 271
+      from: 1
+      to: 2
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 272
+      from: 2
+      to: 3
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 273
+      from: 3
+      to: 4
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 274
+      from: 4
+      to: 5
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 275
+      from: 5
+      to: 6
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 276
+      from: 6
+      to: 7
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 277
+      from: 7
+      to: 8
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 278
+      from: 8
+      to: 9
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 279
+      from: 9
+      to: 10
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 280
+      from: 10
+      to: 11
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 281
+      from: 11
+      to: 12
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 282
+      from: 12
+      to: 13
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 283
+      from: 13
+      to: 14
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 284
+      from: 14
+      to: 15
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 285
+      from: 15
+      to: 16
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 286
+      from: 16
+      to: 17
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 287
+      from: 17
+      to: 18
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 288
+      from: 22
+      to: 23
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 289
+      from: 23
+      to: 24
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 290
+      from: 24
+      to: 25
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 291
+      from: 25
+      to: 26
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 292
+      from: 26
+      to: 27
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 293
+      from: 27
+      to: 28
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 294
+      from: 28
+      to: 29
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 295
+      from: 29
+      to: 30
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 296
+      from: 30
+      to: 31
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 297
+      from: 31
+      to: 32
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 298
+      from: 32
+      to: 33
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 299
+      from: 33
+      to: 34
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 300
+      from: 35
+      to: 36
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 301
+      from: 36
+      to: 37
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 302
+      from: 37
+      to: 38
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 303
+      from: 38
+      to: 39
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 304
+      from: 39
+      to: 40
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 305
+      from: 40
+      to: 41
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 306
+      from: 41
+      to: 42
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 307
+      from: 42
+      to: 43
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 308
+      from: 43
+      to: 44
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 309
+      from: 44
+      to: 45
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 310
+      from: 45
+      to: 46
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 311
+      from: 46
+      to: 47
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 312
+      from: 47
+      to: 48
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 313
+      from: 48
+      to: 49
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 314
+      from: 49
+      to: 50
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 315
+      from: 50
+      to: 51
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 316
+      from: 51
+      to: 52
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 317
+      from: 52
+      to: 53
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 318
+      from: 57
+      to: 58
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 319
+      from: 58
+      to: 59
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 320
+      from: 59
+      to: 60
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 321
+      from: 60
+      to: 61
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 322
+      from: 61
+      to: 62
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 323
+      from: 62
+      to: 63
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 324
+      from: 63
+      to: 64
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 325
+      from: 64
+      to: 65
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 326
+      from: 65
+      to: 66
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 327
+      from: 66
+      to: 67
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 328
+      from: 67
+      to: 68
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 329
+      from: 68
+      to: 69
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 330
+      from: 70
+      to: 71
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 331
+      from: 71
+      to: 72
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 332
+      from: 72
+      to: 73
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 333
+      from: 73
+      to: 74
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 334
+      from: 74
+      to: 75
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 335
+      from: 75
+      to: 76
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 336
+      from: 76
+      to: 77
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 337
+      from: 77
+      to: 78
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 338
+      from: 78
+      to: 79
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 339
+      from: 79
+      to: 80
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 340
+      from: 80
+      to: 81
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 341
+      from: 81
+      to: 82
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 342
+      from: 82
+      to: 83
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 343
+      from: 83
+      to: 84
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 344
+      from: 84
+      to: 85
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 345
+      from: 85
+      to: 86
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 346
+      from: 86
+      to: 87
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 347
+      from: 87
+      to: 88
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 348
+      from: 92
+      to: 93
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 349
+      from: 93
+      to: 94
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 350
+      from: 94
+      to: 95
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 351
+      from: 95
+      to: 96
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 352
+      from: 96
+      to: 97
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 353
+      from: 97
+      to: 98
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 354
+      from: 98
+      to: 99
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 355
+      from: 99
+      to: 100
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 356
+      from: 100
+      to: 101
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 357
+      from: 101
+      to: 102
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 358
+      from: 102
+      to: 103
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 359
+      from: 103
+      to: 104
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 360
+      from: 105
+      to: 106
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 361
+      from: 106
+      to: 107
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 362
+      from: 107
+      to: 108
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 363
+      from: 108
+      to: 109
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 364
+      from: 109
+      to: 110
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 365
+      from: 110
+      to: 111
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 366
+      from: 111
+      to: 112
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 367
+      from: 112
+      to: 113
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 368
+      from: 113
+      to: 114
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 369
+      from: 114
+      to: 115
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 370
+      from: 115
+      to: 116
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 371
+      from: 116
+      to: 117
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 372
+      from: 117
+      to: 118
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 373
+      from: 118
+      to: 119
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 374
+      from: 119
+      to: 120
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 375
+      from: 120
+      to: 121
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 376
+      from: 121
+      to: 122
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 377
+      from: 122
+      to: 123
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 378
+      from: 124
+      to: 125
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 379
+      from: 125
+      to: 126
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 380
+      from: 126
+      to: 127
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 381
+      from: 127
+      to: 128
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 382
+      from: 128
+      to: 129
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 383
+      from: 129
+      to: 130
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 384
+      from: 130
+      to: 131
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 385
+      from: 131
+      to: 132
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 386
+      from: 132
+      to: 133
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 387
+      from: 133
+      to: 134
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 388
+      from: 134
+      to: 135
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 389
+      from: 135
+      to: 136
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 390
+      from: 136
+      to: 137
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 391
+      from: 137
+      to: 138
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 392
+      from: 138
+      to: 139
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 393
+      from: 139
+      to: 140
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 394
+      from: 140
+      to: 141
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 395
+      from: 141
+      to: 142
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 396
+      from: 143
+      to: 144
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 397
+      from: 144
+      to: 145
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 398
+      from: 145
+      to: 146
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 399
+      from: 146
+      to: 147
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 400
+      from: 147
+      to: 148
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 401
+      from: 148
+      to: 149
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 402
+      from: 149
+      to: 150
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 403
+      from: 150
+      to: 151
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 404
+      from: 151
+      to: 152
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 405
+      from: 152
+      to: 153
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 406
+      from: 153
+      to: 154
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 407
+      from: 154
+      to: 155
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 408
+      from: 155
+      to: 156
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 409
+      from: 156
+      to: 157
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 410
+      from: 157
+      to: 158
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 411
+      from: 158
+      to: 159
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 412
+      from: 159
+      to: 160
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 413
+      from: 160
+      to: 161
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 414
+      from: 162
+      to: 163
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 415
+      from: 163
+      to: 164
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 416
+      from: 164
+      to: 165
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 417
+      from: 165
+      to: 166
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 418
+      from: 166
+      to: 167
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 419
+      from: 167
+      to: 168
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 420
+      from: 168
+      to: 169
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 421
+      from: 169
+      to: 170
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 422
+      from: 170
+      to: 171
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 423
+      from: 171
+      to: 172
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 424
+      from: 172
+      to: 173
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 425
+      from: 173
+      to: 174
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 426
+      from: 174
+      to: 175
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 427
+      from: 175
+      to: 176
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 428
+      from: 176
+      to: 177
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 429
+      from: 177
+      to: 178
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 430
+      from: 178
+      to: 179
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 431
+      from: 179
+      to: 180
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 432
+      from: 181
+      to: 182
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 433
+      from: 182
+      to: 183
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 434
+      from: 183
+      to: 184
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 435
+      from: 184
+      to: 185
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 436
+      from: 185
+      to: 186
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 437
+      from: 186
+      to: 187
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 438
+      from: 187
+      to: 188
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 439
+      from: 188
+      to: 189
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 440
+      from: 189
+      to: 190
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 441
+      from: 190
+      to: 191
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 442
+      from: 191
+      to: 192
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 443
+      from: 192
+      to: 193
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 444
+      from: 193
+      to: 194
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 445
+      from: 194
+      to: 195
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 446
+      from: 195
+      to: 196
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 447
+      from: 196
+      to: 197
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 448
+      from: 197
+      to: 198
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 449
+      from: 198
+      to: 199
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 450
+      from: 200
+      to: 201
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 451
+      from: 201
+      to: 202
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 452
+      from: 202
+      to: 203
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 453
+      from: 203
+      to: 204
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 454
+      from: 204
+      to: 205
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 455
+      from: 205
+      to: 206
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 456
+      from: 206
+      to: 207
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 457
+      from: 207
+      to: 208
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 458
+      from: 208
+      to: 209
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 459
+      from: 209
+      to: 210
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 460
+      from: 210
+      to: 211
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 461
+      from: 211
+      to: 212
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 80
+    - id: 462
+      from: 212
+      to: 213
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 463
+      from: 213
+      to: 214
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 464
+      from: 214
+      to: 215
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 465
+      from: 215
+      to: 216
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 466
+      from: 216
+      to: 217
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 467
+      from: 217
+      to: 218
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 40
+      oneWay: 0
+      length: 120
+    - id: 468
+      from: 219
+      to: 220
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 469
+      from: 220
+      to: 221
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 470
+      from: 221
+      to: 222
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 471
+      from: 222
+      to: 223
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 472
+      from: 223
+      to: 224
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 473
+      from: 224
+      to: 225
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 474
+      from: 225
+      to: 226
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 475
+      from: 226
+      to: 227
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 476
+      from: 227
+      to: 228
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 477
+      from: 228
+      to: 229
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 478
+      from: 229
+      to: 230
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 479
+      from: 230
+      to: 231
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 80
+    - id: 480
+      from: 231
+      to: 232
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 481
+      from: 232
+      to: 233
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 482
+      from: 233
+      to: 234
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 483
+      from: 234
+      to: 235
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 484
+      from: 235
+      to: 236
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 485
+      from: 236
+      to: 237
+      roadClass: 1
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 50
+      oneWay: 0
+      length: 120
+    - id: 486
+      from: 241
+      to: 242
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 487
+      from: 242
+      to: 243
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 488
+      from: 243
+      to: 244
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 489
+      from: 244
+      to: 245
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 490
+      from: 245
+      to: 246
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 491
+      from: 246
+      to: 247
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 492
+      from: 247
+      to: 248
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 493
+      from: 248
+      to: 249
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 494
+      from: 249
+      to: 250
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 495
+      from: 250
+      to: 251
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 496
+      from: 251
+      to: 252
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 497
+      from: 252
+      to: 253
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 498
+      from: 254
+      to: 255
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 499
+      from: 255
+      to: 256
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 500
+      from: 256
+      to: 257
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 501
+      from: 257
+      to: 258
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 502
+      from: 258
+      to: 259
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 503
+      from: 259
+      to: 260
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 504
+      from: 260
+      to: 261
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 505
+      from: 261
+      to: 262
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 506
+      from: 262
+      to: 263
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 507
+      from: 263
+      to: 264
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 508
+      from: 264
+      to: 265
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 509
+      from: 265
+      to: 266
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 510
+      from: 266
+      to: 267
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 511
+      from: 267
+      to: 268
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 512
+      from: 268
+      to: 269
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 513
+      from: 269
+      to: 270
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 514
+      from: 270
+      to: 271
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 515
+      from: 271
+      to: 272
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 516
+      from: 276
+      to: 277
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 517
+      from: 277
+      to: 278
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 518
+      from: 278
+      to: 279
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 519
+      from: 279
+      to: 280
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 520
+      from: 280
+      to: 281
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 521
+      from: 281
+      to: 282
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 522
+      from: 282
+      to: 283
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 523
+      from: 283
+      to: 284
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 524
+      from: 284
+      to: 285
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 525
+      from: 285
+      to: 286
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 526
+      from: 286
+      to: 287
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 527
+      from: 287
+      to: 288
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 528
+      from: 289
+      to: 290
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 529
+      from: 290
+      to: 291
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 530
+      from: 291
+      to: 292
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 531
+      from: 292
+      to: 293
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 532
+      from: 293
+      to: 294
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 533
+      from: 294
+      to: 295
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 534
+      from: 295
+      to: 296
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 535
+      from: 296
+      to: 297
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 536
+      from: 297
+      to: 298
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 537
+      from: 298
+      to: 299
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 538
+      from: 299
+      to: 300
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 539
+      from: 300
+      to: 301
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 80
+    - id: 540
+      from: 301
+      to: 302
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 541
+      from: 302
+      to: 303
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 542
+      from: 303
+      to: 304
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 543
+      from: 304
+      to: 305
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 544
+      from: 305
+      to: 306
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 545
+      from: 306
+      to: 307
+      roadClass: 2
+      lanesPerDirection: 2
+      width: 14
+      speedLimitKmh: 60
+      oneWay: 0
+      length: 120
+    - id: 546
+      from: 311
+      to: 312
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 547
+      from: 312
+      to: 313
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 548
+      from: 313
+      to: 314
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 549
+      from: 314
+      to: 315
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 550
+      from: 315
+      to: 316
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 551
+      from: 316
+      to: 317
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 80
+    - id: 552
+      from: 317
+      to: 318
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 553
+      from: 318
+      to: 319
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 554
+      from: 319
+      to: 320
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 555
+      from: 320
+      to: 321
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 556
+      from: 321
+      to: 322
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 557
+      from: 322
+      to: 323
+      roadClass: 0
+      lanesPerDirection: 1
+      width: 9
+      speedLimitKmh: 30
+      oneWay: 0
+      length: 120
+    - id: 558
+      from: 324
+      to: 325
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 559
+      from: 325
+      to: 326
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 560
+      from: 326
+      to: 327
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 561
+      from: 327
+      to: 328
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 562
+      from: 328
+      to: 329
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 563
+      from: 329
+      to: 330
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 564
+      from: 330
+      to: 331
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 565
+      from: 331
+      to: 332
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 566
+      from: 332
+      to: 333
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 567
+      from: 333
+      to: 334
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 568
+      from: 334
+      to: 335
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 569
+      from: 335
+      to: 336
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 80
+    - id: 570
+      from: 336
+      to: 337
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 571
+      from: 337
+      to: 338
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 572
+      from: 338
+      to: 339
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 573
+      from: 339
+      to: 340
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 574
+      from: 340
+      to: 341
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    - id: 575
+      from: 341
+      to: 342
+      roadClass: 3
+      lanesPerDirection: 3
+      width: 22
+      speedLimitKmh: 80
+      oneWay: 0
+      length: 120
+    districts:
+    - name: Downtown
+      type: 2
+      min: {x: -240, y: -240}
+      max: {x: 240, y: 240}
+    - name: Northwest Residential
+      type: 0
+      min: {x: -960, y: 240}
+      max: {x: -240, y: 960}
+    - name: West Residential
+      type: 0
+      min: {x: -960, y: -240}
+      max: {x: -240, y: 240}
+    - name: North Commercial
+      type: 1
+      min: {x: -240, y: 240}
+      max: {x: 240, y: 960}
+    - name: Entertainment District
+      type: 4
+      min: {x: 240, y: 240}
+      max: {x: 960, y: 960}
+    - name: Special Locations
+      type: 6
+      min: {x: 240, y: -240}
+      max: {x: 960, y: 240}
+    - name: Southeast Commercial
+      type: 1
+      min: {x: 240, y: -960}
+      max: {x: 960, y: -240}
+    - name: Southwest Industrial
+      type: 3
+      min: {x: -960, y: -960}
+      max: {x: -240, y: -240}
+    - name: South Industrial
+      type: 3
+      min: {x: -240, y: -960}
+      max: {x: 240, y: -240}
+    pois:
+    - id: garage_main
+      displayName: City Garage
+      type: 4
+      position: {x: 40, y: 0, z: 40}
+      district: 2
+    - id: hospital_main
+      displayName: City General Hospital
+      type: 0
+      position: {x: 420, y: 0, z: 40}
+      district: 6
+    - id: police_main
+      displayName: Central Police Station
+      type: 1
+      position: {x: 540, y: 0, z: -40}
+      district: 6
+    - id: safehouse_1
+      displayName: Safe House North-West
+      type: 2
+      position: {x: -540, y: 0, z: 120}
+      district: 0
+    - id: safehouse_2
+      displayName: Safe House South
+      type: 2
+      position: {x: -40, y: 0, z: -300}
+      district: 3
+    - id: petrol_1
+      displayName: Highway Fuel Station East
+      type: 3
+      position: {x: 900, y: 0, z: 120}
+      district: 6
+    - id: petrol_2
+      displayName: Highway Fuel Station West
+      type: 3
+      position: {x: -900, y: 0, z: -120}
+      district: 0
+    - id: petrol_3
+      displayName: Downtown Fuel Station
+      type: 3
+      position: {x: -120, y: 0, z: 120}
+      district: 2
+    - id: repair_1
+      displayName: Karthi Auto Repair
+      type: 5
+      position: {x: -420, y: 0, z: -40}
+      district: 0
+    - id: luxury_1
+      displayName: Skyline Residences
+      type: 6
+      position: {x: 660, y: 0, z: 120}
+      district: 6
+    - id: nightclub_1
+      displayName: Neon Lounge
+      type: 7
+      position: {x: 420, y: 0, z: 420}
+      district: 4
+    - id: cinema_1
+      displayName: Grand Cinema
+      type: 8
+      position: {x: 540, y: 0, z: 540}
+      district: 4
+    - id: hotel_1
+      displayName: Harbour Hotel
+      type: 9
+      position: {x: 300, y: 0, z: 660}
+      district: 4
+    - id: warehouse_1
+      displayName: Warehouse 7
+      type: 10
+      position: {x: -420, y: 0, z: -420}
+      district: 3
+    - id: warehouse_2
+      displayName: Container Yard
+      type: 10
+      position: {x: -40, y: 0, z: -540}
+      district: 3

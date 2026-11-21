@@ -1,0 +1,68 @@
+
+Layout
+  nodes 343, edges 576, total road length 61.4 km, extent 1.92 x 1.92 km, signalised junctions 161
+  road classes: highway 72, arterial 144, collector 108, local 252
+    Residential    nodes 60
+    Commercial     nodes 57
+    Downtown       nodes 36
+    Industrial     nodes 46
+    Entertainment  nodes 36
+    Highway        nodes 72
+    Special        nodes 36
+  [PASS] city is about 1.92 km across
+  [PASS] every junction is reachable from every other (one connected network)
+  [PASS] no dead-end junctions
+  [PASS] all edges have length, width and lanes
+  [PASS] highway ring has 3 lanes per direction, 22 m wide
+  [PASS] arterials have 2 lanes per direction (different road widths exist)
+  [PASS] at least three different road widths
+  [PASS] traffic-signal junctions exist
+  [PASS] all seven district types contain roads
+  [PASS] hospital, police, safe house, fuel and garage locations exist
+  [PASS] original downtown 9 m road grid (0, +-80) is preserved
+  [PASS] generation is deterministic
+
+Routing (A*)
+  [PASS] all 80 random node pairs are reachable
+  [PASS] A* finds the same optimal travel time as Dijkstra on 80 random pairs
+  [PASS] route from the south-west corner to the north-east corner exists
+  corner to corner: 3840 m over 37 junctions (Manhattan lower bound 3840 m)
+  [PASS] corner-to-corner distance is sensible (equal to the grid distance)
+  [PASS] route to the same node is trivial
+  [PASS] invalid node ids are rejected, not crashed on
+  [PASS] long west-east trip (1920 m) stays near-straight
+
+Routing edge cases (hand-built graphs)
+  [PASS] forward along a one-way street works
+  [PASS] driving against a one-way street is impossible
+  [PASS] an unreachable node returns false (no crash)
+  [PASS] connectivity check detects an isolated node
+  [PASS] inconsistent node ids are rejected with an exception
+
+GPS guidance
+  [PASS] route between pickup_a and dropoff_c is built
+  route length 166 m, 2 junctions, 5 polyline points
+  [PASS] route is at least as long as the straight line
+  [PASS] at the start, remaining ≈ route length (166 of 166)
+  first instruction: "Turn left in 40 m"
+  [PASS] remaining distance decreases steadily while driving the route
+  [PASS] never flagged off-route while following the route
+  [PASS] arrival is detected at the destination
+  [PASS] turn instructions are produced (Left,Arrive)
+  [PASS] leaving the route by 60+ m is detected
+  [PASS] recalculation from the off-route position gives a new route that starts nearby
+  [PASS] after recalculation the player is back on the route
+
+Existing mission markers on the network
+  pickup_a      snaps to a road 6.0 m away (road class Collector)
+  pickup_b      snaps to a road 6.0 m away (road class Collector)
+  pickup_c      snaps to a road 6.0 m away (road class Local)
+  dropoff_a     snaps to a road 6.0 m away (road class Collector)
+  dropoff_b     snaps to a road 6.0 m away (road class Local)
+  dropoff_c     snaps to a road 6.0 m away (road class Local)
+  garage        snaps to a road 6.0 m away (road class Collector)
+  player_start  snaps to a road 22.0 m away (road class Collector)
+  [PASS] all 8 marker positions are near the network (kerb markers within 12 m, the garage-forecourt spawn within 30 m)
+  [PASS] routes exist between every pickup and every drop-off (9 of 9)
+
+RESULT: 36/36 checks passed - ALL PASSED

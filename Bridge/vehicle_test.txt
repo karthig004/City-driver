@@ -1,0 +1,143 @@
+
+0. Spawn point and facing
+  player_start at (40.0, 0.60, 22.0), car heading 180 deg, facing garage driveway: dot=1.00
+  [PASS] vehicle faces the garage driveway
+
+1. Settling on the road
+  grounded wheels=4/4, body height=-0.001 m, tilt=0.00 deg, speed=0.00 km/h
+  [PASS] all four wheels touch the road
+  [PASS] car does not creep when idle
+  [PASS] car sits level
+
+2. Acceleration (full throttle, flat road)
+  0-30 km/h: 3.08 s | 0-60: 6.76 s | 0-100: n/a s | speed at end of runway: 89 km/h after 11.2 s, 154 m
+  gear shown at end: 4 | lateral drift: -0.01 m | max tilt: 0.3 deg | wheelspin-free launch (no flip)
+  [PASS] 0-60 km/h reached in under 9 s
+  [PASS] car tracks straight under power
+  [PASS] no excessive pitch under acceleration
+  [PASS] wheels never lose the road along 154 m incl. junction seams (min wheels on ground 4)
+
+3. Braking from 60 km/h
+  stopped in 1.84 s over 14.6 m (avg decel 9.1 m/s2) | lateral drift 0.00 m | max pitch 0.9 deg
+  [PASS] 60 km/h stopping distance is between 12 and 40 m
+  [PASS] car brakes in a straight line
+
+3b. Handbrake from 60 km/h
+  stopped in 4.08 s over 32.6 m | max tilt 0.4 deg
+  [PASS] handbrake does not flip the car
+
+4. Reverse
+  from standstill, reverse pedal 6 s: max reverse speed 30.1 km/h, moved -29.5 m, gear R, drift 0.01 m
+  [PASS] car reverses
+  [PASS] reverse speed is limited
+  reverse pedal while rolling forward at 40 km/h: braked to a stop at 1.36 s, then reversed from 2.78 s
+  [PASS] reverse pedal brakes first, then drives backwards
+
+5. Steering (full lock) at low / medium / high speed
+  20 km/h: wheel angle 32.0 deg | yaw 59 deg/s | turn radius 5.4 m | lateral 0.58 g | max slip angle 12 deg | max tilt 0.7 deg | min wheels on ground 4
+  [PASS] 20 km/h full-lock turn stays stable (tilt < 25 deg)
+  [PASS] 20 km/h full-lock turn does not spin out (max slip angle 12 < 30 deg)
+  [PASS] 20 km/h full-lock turn stays within realistic grip (< 1.25 g)
+  50 km/h: wheel angle 6.8 deg | yaw 31 deg/s | turn radius 25.7 m | lateral 0.77 g | max slip angle 3 deg | max tilt 0.8 deg | min wheels on ground 4
+  [PASS] 50 km/h full-lock turn stays stable (tilt < 25 deg)
+  [PASS] 50 km/h full-lock turn does not spin out (max slip angle 3 < 30 deg)
+  [PASS] 50 km/h full-lock turn stays within realistic grip (< 1.25 g)
+  100 km/h: wheel angle 1.7 deg | yaw 15 deg/s | turn radius 109.3 m | lateral 0.72 g | max slip angle 4 deg | max tilt 0.7 deg | min wheels on ground 4
+  [PASS] 100 km/h full-lock turn stays stable (tilt < 25 deg)
+  [PASS] 100 km/h full-lock turn does not spin out (max slip angle 4 < 30 deg)
+  [PASS] 100 km/h full-lock turn stays within realistic grip (< 1.25 g)
+  [PASS] high-speed turn radius is wide (> 35 m): no twitchy steering
+
+6. Stability stress tests
+  120 km/h full-lock slalom: max tilt 0.5 deg, min up.y 1.00
+  [PASS] 120 km/h slalom: body tilt stays under 25 deg
+  [PASS] 120 km/h slalom: car not spinning at the end (slip 3 deg)
+  100 km/h panic brake + steer 0.6: max tilt 1.5 deg, lateral movement 77.7 m
+  [PASS] panic brake while steering is controllable
+  40 km/h kerb strike at 30 deg: max tilt 1.9 deg, final position (-34.4, -0.04, -84.7)
+  [PASS] kerb strike does not flip the car
+
+7. Suspension (0.8 m drop)
+  rest height -0.001 m, lowest -0.103 m (compression 10.2 cm), bounces after landing 1, settled by 0.92 s
+  [PASS] suspension does not bottom out on a 0.8 m drop
+  [PASS] suspension settles within 2.5 s
+  [PASS] suspension is reasonably damped
+
+7b. Top speed (flat test pad)
+  from 60 km/h at full throttle for 70 s: top speed 128 km/h (limit 140), 100 km/h at 7.40 s, 120 km/h at 14.94 s, gear 5, max tilt 0.3 deg
+  [PASS] top speed approaches but does not exceed the configured limit
+
+8. Collision with a solid wall at 50 km/h
+  wall face at x=-35.5. Car furthest point x=-38.74 (front is ~2.25 m ahead of pivot), max tilt 0.9 deg, speed afterwards 0.0 km/h
+  collision callback fired in edit-mode physics: False, condition 100%
+  [PASS] car cannot pass through the wall (no tunnelling)
+  [PASS] frontal crash does not flip the car
+  damage model: 14 m/s impact on a repaired car -> condition 80%, performance factor 0.92
+  [PASS] damage model reduces condition proportionally
+
+9. Flip recovery
+    t=0.5s tilt=174 y=0.63 wheels=0 speed=0.8
+    t=1.5s tilt=174 y=0.68 wheels=0 speed=0.8
+    t=2.5s tilt=173 y=0.75 wheels=0 speed=0.4
+    t=3.5s tilt=3 y=0.71 wheels=0 speed=16.9
+    t=4.5s tilt=0 y=0.00 wheels=4 speed=0.0
+    t=5.5s tilt=0 y=0.00 wheels=4 speed=0.0
+    t=6.5s tilt=0 y=0.00 wheels=4 speed=0.0
+    t=7.5s tilt=0 y=0.00 wheels=4 speed=0.0
+  started upside down (tilt 180 deg) -> upright (<15 deg) after 3.04 s, final tilt 0.0 deg, wheels on ground 4
+  [PASS] an upside-down car is put back on its wheels automatically
+
+10. Wheel visual alignment
+  FL: local pos (-0.84, 0.34, 1.36), tyre bottom -0.1 cm above road, visual-vs-collider error 0.0 mm
+  FR: local pos (0.84, 0.32, 1.36), tyre bottom -0.2 cm above road, visual-vs-collider error 0.0 mm
+  RL: local pos (-0.84, 0.34, -1.36), tyre bottom -0.2 cm above road, visual-vs-collider error 0.0 mm
+  RR: local pos (0.84, 0.32, -1.36), tyre bottom -0.2 cm above road, visual-vs-collider error 0.0 mm
+  controller steer angle 11.1 deg, front-left wheel visual yaw relative to body 11.8 deg
+  [PASS] wheel visuals sit exactly on their WheelColliders
+  [PASS] left/right wheels are symmetric
+  [PASS] front wheel visuals turn with the steering angle
+  [PASS] tyres touch the road (no floating wheels)
+
+11. Follow camera
+  camera distance to car 7.0-9.5 m | camera-vs-car acceleration: peak 8.8, rms 2.09 m/s2 | max angle car off view-centre 6 deg | FOV 60.1-64.1 | frames inside geometry 0
+  camera peak at t=7.04s speed=47km/h steer=0.0 rel=(-6.03,2.86,6.69) wheels=4
+  [PASS] camera keeps a sensible distance while driving
+  [PASS] car stays in frame
+  [PASS] camera never ends up inside geometry while driving
+  [PASS] camera motion relative to the car is smooth (no shake spikes)
+  wall behind the car: camera 3.8 m from car (normal 6.5-7 m), inside geometry: False
+  [PASS] camera is pulled in front of a wall instead of clipping through it
+  reset camera: placed behind car, alignment dot=0.87
+  [PASS] camera reset puts the camera behind the car
+
+15. Every car drives differently: grip, power slide and handbrake drift
+  City Taxi      RWD | steady turn 0.34 g | power slide: slip 3 deg, drift 0.00 | handbrake: slip 40 deg, drift 1.00 | after the slide, slip 0 deg | worst tilt 1
+  [PASS] City Taxi straightens out again after a handbrake turn (slip 0 deg 2 s later)
+  [PASS] City Taxi stays on its wheels in a power slide and a handbrake turn (tilt 1 deg)
+  Metro Hatch    FWD | steady turn 0.40 g | power slide: slip 4 deg, drift 0.00 | handbrake: slip 52 deg, drift 1.00 | after the slide, slip 0 deg | worst tilt 1
+  [PASS] Metro Hatch straightens out again after a handbrake turn (slip 0 deg 2 s later)
+  [PASS] Metro Hatch stays on its wheels in a power slide and a handbrake turn (tilt 1 deg)
+  Metro Premium  AWD | steady turn 0.37 g | power slide: slip 4 deg, drift 0.00 | handbrake: slip 44 deg, drift 1.00 | after the slide, slip 0 deg | worst tilt 2
+  [PASS] Metro Premium straightens out again after a handbrake turn (slip 0 deg 2 s later)
+  [PASS] Metro Premium stays on its wheels in a power slide and a handbrake turn (tilt 2 deg)
+  Apex GT        RWD | steady turn 0.41 g | power slide: slip 54 deg, drift 1.00 | handbrake: slip 70 deg, drift 1.00 | after the slide, slip 0 deg | worst tilt 2
+  [PASS] Apex GT straightens out again after a handbrake turn (slip 0 deg 2 s later)
+  [PASS] Apex GT stays on its wheels in a power slide and a handbrake turn (tilt 2 deg)
+  Bulldog        RWD | steady turn 0.52 g | power slide: slip 69 deg, drift 1.00 | handbrake: slip 77 deg, drift 1.00 | after the slide, slip 0 deg | worst tilt 1
+  [PASS] Bulldog straightens out again after a handbrake turn (slip 0 deg 2 s later)
+  [PASS] Bulldog stays on its wheels in a power slide and a handbrake turn (tilt 1 deg)
+  Ridge Runner   AWD | steady turn 0.39 g | power slide: slip 9 deg, drift 0.14 | handbrake: slip 50 deg, drift 1.00 | after the slide, slip 0 deg | worst tilt 2
+  [PASS] Ridge Runner straightens out again after a handbrake turn (slip 0 deg 2 s later)
+  [PASS] Ridge Runner stays on its wheels in a power slide and a handbrake turn (tilt 2 deg)
+  Sovereign LX   AWD | steady turn 0.38 g | power slide: slip 5 deg, drift 0.00 | handbrake: slip 40 deg, drift 1.00 | after the slide, slip 0 deg | worst tilt 2
+  [PASS] Sovereign LX straightens out again after a handbrake turn (slip 0 deg 2 s later)
+  [PASS] Sovereign LX stays on its wheels in a power slide and a handbrake turn (tilt 2 deg)
+  Vantage S      RWD | steady turn 0.38 g | power slide: slip 49 deg, drift 1.00 | handbrake: slip 65 deg, drift 1.00 | after the slide, slip 0 deg | worst tilt 2
+  [PASS] Vantage S straightens out again after a handbrake turn (slip 0 deg 2 s later)
+  [PASS] Vantage S stays on its wheels in a power slide and a handbrake turn (tilt 2 deg)
+  [PASS] the muscle car breaks loose under power much more than the taxi (69 vs 3 deg)
+  [PASS] the rear-drive sports cars drift with the handbrake (Apex 70, Bulldog 77 deg)
+  [PASS] the supercar corners harder than the taxi (0.38 vs 0.34 g)
+  [PASS] the luxury cruiser is more stable than the muscle car
+
+RESULT: ALL CHECKS PASSED
